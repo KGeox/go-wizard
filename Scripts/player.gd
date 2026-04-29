@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody3D
 ## Determining how fast the player moves
 @export var SPEED := 5.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 9
 @onready var camera: Node3D = $SpringArm3D/Camera3D
 @onready var anim_player: AnimationPlayer = $Mesh/AnimationPlayer
 @onready var anim_tree: AnimationTree = $AnimationTree
@@ -73,5 +73,3 @@ func turn_to(direction: Vector3) ->void:
 		var yaw:= atan2(-direction.x, -direction.z)
 		yaw = lerp_angle(rotation.y, yaw, .25)
 		rotation.y = yaw
-		
-		
