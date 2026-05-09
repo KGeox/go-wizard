@@ -14,3 +14,4 @@ func exit(player: Player) -> void:
 ## Called for every physics frame that we're in this state
 func update(player:Player, delta: float) -> void:
 	pass
+	
