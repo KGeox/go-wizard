@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b3tdw5s4puxhv"]
+
+[ext_resource type="PackedScene" uid="uid://c6w232y8eerax" path="res://Scenes/enemy.tscn" id="1_cmmbj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5aef3"]
+custom_solver_bias = 0.003
+margin = 1.338
+size = Vector3(100, 2, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmmbj"]
+albedo_color = Color(0.7294118, 0, 0.34901962, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ckivy"]
+material = SubResource("StandardMaterial3D_cmmbj")
+size = Vector3(100, 2, 100)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1528309415]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1146454122]
+shape = SubResource("BoxShape3D_5aef3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1142828068]
+mesh = SubResource("BoxMesh_ckivy")
+
+[node name="Enemy" parent="." unique_id=1449822063 instance=ExtResource("1_cmmbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1161497, 0)
