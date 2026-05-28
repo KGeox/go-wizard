@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d0l8m0jkdaps"]
+
+[node name="Pause" type="Control" unique_id=880503080]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1161.0
+offset_bottom = 654.0
+
+[node name="Button" type="Button" parent="." unique_id=1755287247]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2118830035]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1908134032]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 650.0
+
+[node name="Label" type="Label" parent="." unique_id=535572039]
+modulate = Color(0.047058824, 0.61960787, 1, 1)
+layout_mode = 0
+offset_right = 560.0
+offset_bottom = 234.0
+text = "PAUSE"

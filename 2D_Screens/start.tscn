@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://h1hpemr7knmw"]
+
+[node name="Start" type="Control" unique_id=1545048918]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1157.0
+offset_bottom = 648.0
+
+[node name="Button" type="Button" parent="." unique_id=774029827]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=90478268]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=1287566741]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=876004782]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 643.0
+color = Color(1, 1, 1, 0.98039216)

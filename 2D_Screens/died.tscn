@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dec2ag8m1imq6"]
+
+[node name="Died" type="Control" unique_id=63200207]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1163.0
+offset_bottom = 659.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1006395155]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 654.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1201404799]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="." unique_id=1730154100]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Label" type="Label" parent="." unique_id=158924263]
+modulate = Color(0.27058825, 0.28627452, 0.67058825, 1)
+layout_mode = 0
+offset_right = 565.0
+offset_bottom = 161.0
+text = "DUMMY TEXT FOR NOW but SURELY VERY SOON A THING LIKE \"You DIED\""
