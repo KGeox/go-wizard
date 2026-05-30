@@ -19,6 +19,7 @@ const BLEND_SPEED := 0.2
 var state: BasePLayerState = PlayerStates.IDLE
 
 func _ready() -> void:
+	add_to_group("player")
 	state.enter(self)
 
 ## Changes the current player state and runs the correct function
@@ -58,3 +59,4 @@ func update_velocity_using_direction(direction: Vector3,speed: float = base_spee
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
+		

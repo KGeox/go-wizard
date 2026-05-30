@@ -13,7 +13,7 @@ func pre_update(player: Player)-> void:
 		player.change_state_to(PlayerStates.FALL)   
 	if current_speed == 0:
 		player.change_state_to(PlayerStates.IDLE)
-	if current_speed < player.run_speed:
+	elif current_speed < player.run_speed:
 		player.change_state_to(PlayerStates.WALK)
 
 

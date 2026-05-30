@@ -48,7 +48,14 @@ mesh = SubResource("BoxMesh_hghv2")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=767908303]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24626446, 1.2465476, 3.3957942)
 
-[node name="DetectionArea" type="Area3D" parent="." unique_id=1746461375]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=611110694]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=191960782]
+[node name="Time_To_Detect" type="Timer" parent="." unique_id=143670694]
+
+[node name="DetectionArea" type="Area3D" parent="." unique_id=530239295]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=2106077844]
 shape = SubResource("BoxShape3D_hghv2")
+
+[connection signal="timeout" from="Time_To_Detect" to="." method="_on_time_to_detect_timeout"]

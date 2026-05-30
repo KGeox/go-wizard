@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dp4n3x8qi0gc1" path="res://Meshes/test_level_grass.png" id="9_y71vl"]
 [ext_resource type="AudioStream" uid="uid://bfmpdvsut5hnw" path="res://Audio/Footsteps/grass_step_sound.tres" id="11_w5kog"]
 [ext_resource type="AudioStream" uid="uid://wobn8gdf7ncq" path="res://Audio/Footsteps/dirt_step_sound.tres" id="13_y71vl"]
+[ext_resource type="PackedScene" uid="uid://c6w232y8eerax" path="res://Scenes/enemy.tscn" id="15_ss8vn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bk35t"]
 sky_top_color = Color(0.13418168, 0.70986724, 0.7804282, 1)
@@ -266,12 +267,21 @@ data = PackedVector3Array(10.940868, 0, 5.9667535, 12.974442, 0, -2.9054985, 12.
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=683291339]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=188859429]
 environment = SubResource("Environment_r48yj")
 
 [node name="Player" parent="." unique_id=1344914018 instance=ExtResource("1_r48yj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7005663, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1534363085]
+stream = ExtResource("3_5ogh5")
+autoplay = true
+bus = &"Music"
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=107918446]
 
 [node name="test_level" type="Node3D" parent="." unique_id=199487506]
 
@@ -325,9 +335,5 @@ footstep_sounds = ExtResource("13_y71vl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="test_level/dirt/StaticBody3D" unique_id=176074284]
 shape = SubResource("ConcavePolygonShape3D_y5ttu")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1534363085]
-stream = ExtResource("3_5ogh5")
-autoplay = true
-bus = &"Music"
-
-[node name="AnimationTree" type="AnimationTree" parent="." unique_id=107918446]
+[node name="Enemy" parent="." unique_id=1449822063 instance=ExtResource("15_ss8vn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3977869, -6.936938)
