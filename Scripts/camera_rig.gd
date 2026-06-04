@@ -12,7 +12,6 @@ var camera_rig_height: float = position.y
 func _ready() -> void:
 	spring_length = camera.position.z
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -39,24 +38,3 @@ func _input(event: InputEvent) -> void:
 	
 func _physics_process(delta: float) -> void:
 	position = player.position + Vector3(0,camera_rig_height, 0)
-	
-	
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

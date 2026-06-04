@@ -9,6 +9,10 @@ func enter(player: Player) -> void:
 func pre_update(player: Player)-> void:
 	var direction := player.get_move_input()
 	
+	if player.current_interactable_obj != null:
+		if Input.is_action_just_pressed("interact"):
+			player.current_interactable_obj.interact()
+	
 	if not player.is_on_floor():
 		player.change_state_to(FallPlayerState.new())
 	#elif current_speed > player.run_speed:
