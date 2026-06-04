@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://h1hpemr7knmw"]
 
+[ext_resource type="FontFile" uid="uid://d3badmn4q0y7i" path="res://fonts/MoskitoesShadowPersonalUseRegular-6Yr0q.ttf" id="1_wko1a"]
+[ext_resource type="FontFile" uid="uid://bd44rcon6t3rw" path="res://fonts/GoldropspersonaluseRegular-9Ynn5.otf" id="2_841fv"]
+
 [node name="Start" type="Control" unique_id=1545048918]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1157.0
 offset_bottom = 648.0
-
-[node name="Button" type="Button" parent="." unique_id=774029827]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=90478268]
 layout_mode = 0
@@ -24,8 +22,22 @@ color = Color(0.24000001, 1, 0.94933337, 0.98039216)
 
 [node name="Label" type="Label" parent="." unique_id=1287566741]
 layout_mode = 0
-offset_left = 84.0
-offset_top = 41.0
-offset_right = 312.0
-offset_bottom = 196.0
+offset_left = 230.0
+offset_top = -41.0
+offset_right = 831.0
+offset_bottom = 159.0
+theme_override_colors/font_color = Color(0.21089996, 0.171, 0.57, 1)
+theme_override_fonts/font = ExtResource("1_wko1a")
+theme_override_font_sizes/font_size = 200
 text = "GO WIZARD"
+
+[node name="Button" type="Button" parent="." unique_id=774029827]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 306.0
+offset_right = 1040.0
+offset_bottom = 414.0
+theme_override_fonts/font = ExtResource("2_841fv")
+theme_override_font_sizes/font_size = 100
+text = "Start"
+flat = true

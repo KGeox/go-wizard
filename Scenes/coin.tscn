@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://hjrjk7fiu8y2"]
+
+[ext_resource type="Script" uid="uid://cuevkbr4nvjwa" path="res://Scenes/coin.gd" id="1_2qo34"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgwqp"]
+albedo_color = Color(0.9490196, 0.8039216, 0.3254902, 1)
+metallic = 0.72
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sgwqp"]
+material = SubResource("StandardMaterial3D_sgwqp")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.05
+
+[sub_resource type="Animation" id="Animation_2qo34"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5707964, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jgi06"]
+resource_name = "rotate_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.99),
+"transitions": PackedFloat32Array(1, 0.9330331),
+"update": 0,
+"values": [Vector3(1.5707964, 0, 0), Vector3(1.5707964, 6.2831855, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g537i"]
+_data = {
+&"RESET": SubResource("Animation_2qo34"),
+&"rotate_animation": SubResource("Animation_jgi06")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_sgwqp"]
+height = 0.9383545
+
+[node name="coin" type="Area3D" unique_id=978316015]
+collision_layer = 4
+collision_mask = 32
+script = ExtResource("1_2qo34")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1556667689]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.1, 0)
+mesh = SubResource("CylinderMesh_sgwqp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=722579838]
+libraries/ = SubResource("AnimationLibrary_g537i")
+autoplay = &"rotate_animation"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1217508455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42837733, -0.005844593)
+shape = SubResource("CylinderShape3D_sgwqp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

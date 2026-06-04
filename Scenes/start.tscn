@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://wobn8gdf7ncq" path="res://Audio/Footsteps/dirt_step_sound.tres" id="13_y71vl"]
 [ext_resource type="PackedScene" uid="uid://c6w232y8eerax" path="res://Scenes/enemy.tscn" id="15_ss8vn"]
 [ext_resource type="Script" uid="uid://djs218jhq4s7m" path="res://Scenes/change_level.gd" id="16_w5kog"]
+[ext_resource type="PackedScene" uid="uid://hjrjk7fiu8y2" path="res://Scenes/coin.tscn" id="18_vp7ys"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bk35t"]
 sky_top_color = Color(0.13418168, 0.70986724, 0.7804282, 1)
@@ -373,6 +374,20 @@ mesh = SubResource("SphereMesh_vp7ys")
 
 [node name="coffer" parent="." unique_id=1891636309 instance=ExtResource("7_y71vl")]
 transform = Transform3D(0.02443221, 0, -0.9997015, 0, 1, 0, 0.9997015, 0, 0.02443221, 7.668231, 8.535094, 30.859165)
+
+[node name="Coins" type="Node3D" parent="." unique_id=1990766320]
+
+[node name="coin" parent="Coins" unique_id=1810676739 instance=ExtResource("18_vp7ys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.620921, -0.011881761, 14.701)
+
+[node name="coin2" parent="Coins" unique_id=1341657126 instance=ExtResource("18_vp7ys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.262857, 0.012513854, 14.701)
+
+[node name="coin3" parent="Coins" unique_id=1915269095 instance=ExtResource("18_vp7ys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.262857, 0.095189944, 15.073754)
+
+[node name="coin4" parent="Coins" unique_id=1843707125 instance=ExtResource("18_vp7ys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.846118, 0.006167695, 15.029066)
 
 [connection signal="body_entered" from="ChangeLevel" to="ChangeLevel" method="_on_body_entered"]
 [connection signal="body_exited" from="ChangeLevel" to="ChangeLevel" method="_on_body_exited"]

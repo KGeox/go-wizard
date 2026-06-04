@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dec2ag8m1imq6"]
 
+[ext_resource type="FontFile" uid="uid://cfk0toini1yr7" path="res://fonts/BloodstainPersonalUseBold-1GM30.ttf" id="1_f6e5b"]
+
 [node name="Died" type="Control" unique_id=63200207]
 layout_mode = 3
 anchors_preset = 0
@@ -16,14 +18,23 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="." unique_id=1730154100]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="Label" type="Label" parent="." unique_id=158924263]
 modulate = Color(0.27058825, 0.28627452, 0.67058825, 1)
 layout_mode = 0
-offset_right = 565.0
-offset_bottom = 161.0
-text = "DUMMY TEXT FOR NOW but SURELY VERY SOON A THING LIKE \"You DIED\""
+offset_left = 283.0
+offset_top = 7.0
+offset_right = 845.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0.98, 0.019599982, 0.019599982, 1)
+theme_override_fonts/font = ExtResource("1_f6e5b")
+theme_override_font_sizes/font_size = 120
+text = "You DIED"
+
+[node name="Button" type="Button" parent="." unique_id=1730154100]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 165.0
+offset_right = 579.0
+offset_bottom = 196.0
+text = "Restart"
+flat = true

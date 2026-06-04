@@ -1,7 +1,30 @@
 [gd_scene format=3 uid="uid://04iwqjjvkw2p"]
 
+[ext_resource type="FontFile" uid="uid://gvtuf68wc170" path="res://fonts/RustyAttackDemo-d9X8l.otf" id="1_04040"]
+
 [node name="Menu" type="Control" unique_id=1358985529]
 layout_mode = 3
 anchors_preset = 0
+offset_left = -4.0
+offset_top = -4.0
 offset_right = 1170.0
 offset_bottom = 663.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1424240097]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -9.0
+offset_right = 1167.0
+offset_bottom = 662.0
+color = Color(0.8226667, 1, 0.44, 0.7490196)
+
+[node name="Label" type="Label" parent="." unique_id=537028887]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 16.0
+offset_right = 743.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0.041999996, 0.12363334, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_04040")
+theme_override_font_sizes/font_size = 200
+text = "MENU"
