@@ -1,10 +1,14 @@
 extends Node
 
 @export var coins := 0
+@export var lifes := 0
+@export var time_played := 0
+
 
 func save_game() -> void:
 	var save_data := {
-		"coins": coins
+		"coins": coins,
+		"lifes": lifes
 	}
 	var file := FileAccess.open("user://savegame.save", FileAccess.WRITE)
 	var json_text :=JSON.stringify(save_data)
@@ -22,3 +26,4 @@ func load_game() ->void:
 	if parse_result == OK:
 		var data :Dictionary= json.get_data()
 		coins = data["coins"]
+		lifes = data["lifes"]

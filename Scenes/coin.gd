@@ -12,4 +12,5 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	Global.coins += 1
+	Global.lifes += 1
 	queue_free()
