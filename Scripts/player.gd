@@ -28,12 +28,14 @@ var state: BasePLayerState = PlayerStates.IDLE
 
 func _ready() -> void: # When the player first enters the game...
 	state.enter(self) #enter the current state
+	Global.load_game()
 
 ## Changes the current player state and runs the next state
 func change_state_to(next_state: BasePLayerState) -> void:
 	state.exit(self) #exit previous state
 	state = next_state # load next state
 	state.enter(self) # enter the next state
+	print(Global.coins)
 
 func _physics_process(delta: float) -> void: # run all instructions in here 60 times per second
 	state.pre_update(self) # in the state where you are do you do you have to change?

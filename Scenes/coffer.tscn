@@ -2,9 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cghyc0p2usuh3" path="res://coffer.gd" id="1_o38dv"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_lu3ql"]
-size = Vector3(4, 2.8916016, 4)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_na4pd"]
 size = Vector3(2, 1, 1)
 
@@ -83,14 +80,13 @@ _data = {
 &"openCoffer": SubResource("Animation_837k0")
 }
 
-[node name="coffer" type="Node3D" unique_id=1891636309]
+[sub_resource type="BoxShape3D" id="BoxShape3D_lu3ql"]
+size = Vector3(4, 2.8916016, 4)
+
+[node name="coffer" type="Area3D" unique_id=675198867]
+collision_layer = 64
+collision_mask = 32
 script = ExtResource("1_o38dv")
-
-[node name="Area3D" type="Area3D" parent="." unique_id=1693638596]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1265182371]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95980096, 0.012619019)
-shape = SubResource("BoxShape3D_lu3ql")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1202343031]
 
@@ -107,5 +103,9 @@ mesh = SubResource("BoxMesh_nn48f")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D" unique_id=935257250]
 libraries/ = SubResource("AnimationLibrary_412aw")
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1265182371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95980096, 0.012619019)
+shape = SubResource("BoxShape3D_lu3ql")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

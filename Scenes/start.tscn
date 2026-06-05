@@ -294,6 +294,7 @@ environment = SubResource("Environment_r48yj")
 
 [node name="Player" parent="." unique_id=1344914018 instance=ExtResource("1_r48yj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7005663, 0)
+base_speed = 5.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1534363085]
 stream = ExtResource("3_5ogh5")
@@ -359,6 +360,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3977869, -6.936938)
 
 [node name="ChangeLevel" type="Area3D" parent="." unique_id=1257728310]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.169294, 3.7814145, -6.031086)
+collision_mask = 33
 script = ExtResource("16_w5kog")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ChangeLevel" unique_id=586412776]
