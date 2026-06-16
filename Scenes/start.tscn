@@ -294,7 +294,6 @@ environment = SubResource("Environment_r48yj")
 
 [node name="Player" parent="." unique_id=1344914018 instance=ExtResource("1_r48yj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7005663, 0)
-base_speed = 5.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1534363085]
 stream = ExtResource("3_5ogh5")
@@ -387,6 +386,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.262857, 0.012513854, 14.70
 
 [node name="coin3" parent="Coins" unique_id=1915269095 instance=ExtResource("18_vp7ys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.262857, 0.095189944, 15.073754)
+
+[node name="coin5" parent="Coins" unique_id=978316015 instance=ExtResource("18_vp7ys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.262857, 0.17461635, 14.450056)
 
 [node name="coin4" parent="Coins" unique_id=1843707125 instance=ExtResource("18_vp7ys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.846118, 0.006167695, 15.029066)
