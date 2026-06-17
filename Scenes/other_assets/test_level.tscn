@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://exof7lxhuats"]
+
+[ext_resource type="PackedScene" uid="uid://dr2w56gk6jxhk" path="res://Meshes/test_level.glb" id="1_iti4p"]
+[ext_resource type="Script" uid="uid://c68rv5vqn1r6e" path="res://Scripts/worldsound.gd" id="2_dtjkg"]
+[ext_resource type="AudioStream" uid="uid://coel288rw68wv" path="res://Audio/Footsteps/stone_step_sound.tres" id="3_eglq2"]
+
+[node name="test_level" unique_id=199487506 instance=ExtResource("1_iti4p")]
+
+[node name="StaticBody3D" parent="level" parent_id_path=PackedInt32Array(1603285683) index="0" unique_id=1856670931]
+script = ExtResource("2_dtjkg")
+footstep_sounds = ExtResource("3_eglq2")

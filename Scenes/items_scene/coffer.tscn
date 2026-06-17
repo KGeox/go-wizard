@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://b5xt435ly0hic"]
+
+[ext_resource type="Script" uid="uid://cghyc0p2usuh3" path="res://Scripts/coffer.gd" id="1_o38dv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_na4pd"]
+size = Vector3(2, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejs8q"]
+albedo_color = Color(0.6509804, 0.24313726, 0.10980392, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7n4iv"]
+material = SubResource("StandardMaterial3D_ejs8q")
+size = Vector3(2, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lg582"]
+albedo_color = Color(0.8627451, 0.827451, 0.0627451, 1)
+metallic = 0.72
+
+[sub_resource type="BoxMesh" id="BoxMesh_nn48f"]
+material = SubResource("StandardMaterial3D_lg582")
+size = Vector3(2, 0.1, 1)
+
+[sub_resource type="Animation" id="Animation_4lm60"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.55, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_837k0"]
+resource_name = "openCoffer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.52775264, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.55, 0), Vector3(0, 0.7911784, -0.07438576)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_412aw"]
+_data = {
+&"RESET": SubResource("Animation_4lm60"),
+&"openCoffer": SubResource("Animation_837k0")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lu3ql"]
+size = Vector3(4, 2.8916016, 4)
+
+[node name="coffer" type="Area3D" unique_id=675198867]
+collision_layer = 64
+collision_mask = 32
+script = ExtResource("1_o38dv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1202343031]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1250563180]
+shape = SubResource("BoxShape3D_na4pd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=593029493]
+mesh = SubResource("BoxMesh_7n4iv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D" unique_id=1735117512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+mesh = SubResource("BoxMesh_nn48f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D" unique_id=935257250]
+libraries/ = SubResource("AnimationLibrary_412aw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1265182371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95980096, 0.012619019)
+shape = SubResource("BoxShape3D_lu3ql")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

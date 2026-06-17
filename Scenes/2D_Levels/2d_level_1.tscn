@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bdh0s0rxgwqvm"]
+
+[ext_resource type="PackedScene" uid="uid://0bxjsxq4yd42" path="res://Scenes/characters_scene/2D_characters/1character_body_2d.tscn" id="1_gdpfr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t2ia8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5fesm"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5fesm"]
+normal = Vector2(1, 0)
+
+[node name="2DLevel1" type="Node2D" unique_id=178806960]
+
+[node name="1CharacterBody2D" parent="." unique_id=210818482 instance=ExtResource("1_gdpfr")]
+position = Vector2(20, -50)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=912722239]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=779489140]
+shape = SubResource("WorldBoundaryShape2D_t2ia8")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1771733121]
+position = Vector2(1000, 0.5)
+scale = Vector2(2000, 3)
+texture = SubResource("CanvasTexture_5fesm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1435285223]
+shape = SubResource("WorldBoundaryShape2D_5fesm")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1449050138]
+format = 2

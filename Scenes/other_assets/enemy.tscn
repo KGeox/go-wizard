@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://c6w232y8eerax"]
+
+[ext_resource type="Script" uid="uid://kb1ytwupwne8" path="res://Scripts/enemy.gd" id="1_hghv2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ne65n"]
+sky_top_color = Color(0.13418168, 0.70986724, 0.7804282, 1)
+sky_horizon_color = Color(0.9886146, 1.1175776, 1.1184355, 1)
+ground_bottom_color = Color(0.46582502, 0.40599102, 0.3388622, 1)
+ground_horizon_color = Color(0.9886146, 1.1175776, 1.1184355, 1)
+
+[sub_resource type="Sky" id="Sky_hghv2"]
+sky_material = SubResource("ProceduralSkyMaterial_ne65n")
+
+[sub_resource type="Environment" id="Environment_1f0kj"]
+background_mode = 2
+sky = SubResource("Sky_hghv2")
+tonemap_mode = 2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ne65n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hghv2"]
+albedo_color = Color(0.9137255, 0.08627451, 0.101960786, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1f0kj"]
+material = SubResource("StandardMaterial3D_hghv2")
+
+[sub_resource type="BoxMesh" id="BoxMesh_hghv2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hghv2"]
+size = Vector3(10, 1, 10)
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1449822063]
+collision_layer = 8
+collision_mask = 35
+script = ExtResource("1_hghv2")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1099695100]
+environment = SubResource("Environment_1f0kj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=949597966]
+shape = SubResource("CapsuleShape3D_ne65n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=144531214]
+mesh = SubResource("CapsuleMesh_1f0kj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2099141486]
+transform = Transform3D(0.5619794, 0, 0, 0, 0.3745833, 0, 0, 0, 1, 0, 0.7245637, -0.09662461)
+mesh = SubResource("BoxMesh_hghv2")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=767908303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24626446, 1.2465476, 3.3957942)
+
+[node name="DetectionArea" type="Area3D" parent="." unique_id=1746461375]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=191960782]
+shape = SubResource("BoxShape3D_hghv2")
