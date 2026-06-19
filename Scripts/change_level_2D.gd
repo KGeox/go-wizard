@@ -24,5 +24,5 @@ func _on_body_exited(body: Node2D) -> void:
 				print("You went out")
 	
 func interact() ->void:
-	get_tree().change_scene_to_file("res://Scenes/level2.tscn")
+	get_tree().change_scene_to_file("res://Scenes/3D_Levels/start.tscn")
 	Global.save_game()

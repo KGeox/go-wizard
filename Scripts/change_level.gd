@@ -28,6 +28,6 @@ func _on_body_exited(body: Node3D) -> void:
 		
 
 func interact() ->void:
-	get_tree().change_scene_to_file("res://Scenes/level2.tscn")
+	get_tree().change_scene_to_file("res://Scenes/3D_Levels/level2.tscn")
 	Global.save_game()
 	
