@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ctpv2jrbxr0mb" path="res://Meshes/test_level_wood.png" id="6_1tr1b"]
 [ext_resource type="AudioStream" uid="uid://hqdom5sdqohl" path="res://Audio/Footsteps/wood_step_sound.tres" id="7_1tr1b"]
 [ext_resource type="Texture2D" uid="uid://xy81fsbljdjv" path="res://Meshes/test_level_snow.png" id="7_ss8vn"]
-[ext_resource type="PackedScene" uid="uid://b5xt435ly0hic" path="res://Scenes/items_scene/coffer.tscn" id="7_y71vl"]
+[ext_resource type="PackedScene" uid="uid://b5xt435ly0hic" path="res://Scenes/items_scene/3d/coffer.tscn" id="7_y71vl"]
 [ext_resource type="Texture2D" uid="uid://ccq8lk7wyyvs6" path="res://Meshes/test_level_dirt.png" id="8_w5kog"]
 [ext_resource type="AudioStream" uid="uid://cafxgaw83fnys" path="res://Audio/Footsteps/snow_step_sound.tres" id="9_ss8vn"]
 [ext_resource type="Texture2D" uid="uid://dp4n3x8qi0gc1" path="res://Meshes/test_level_grass.png" id="9_y71vl"]
@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://wobn8gdf7ncq" path="res://Audio/Footsteps/dirt_step_sound.tres" id="13_y71vl"]
 [ext_resource type="PackedScene" uid="uid://c6w232y8eerax" path="res://Scenes/other_assets/enemy.tscn" id="15_ss8vn"]
 [ext_resource type="Script" uid="uid://djs218jhq4s7m" path="res://Scripts/change_level.gd" id="16_w5kog"]
-[ext_resource type="PackedScene" uid="uid://hjrjk7fiu8y2" path="res://Scenes/items_scene/coin.tscn" id="18_vp7ys"]
+[ext_resource type="PackedScene" uid="uid://hjrjk7fiu8y2" path="res://Scenes/items_scene/3d/coin.tscn" id="18_vp7ys"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bk35t"]
 sky_top_color = Color(0.13418168, 0.70986724, 0.7804282, 1)

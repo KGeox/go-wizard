@@ -5,13 +5,13 @@
 [sub_resource type="CanvasTexture" id="CanvasTexture_bbsgk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bbsgk"]
-radius = 13.038404
 
 [node name="1CharacterBody2D" type="CharacterBody2D" unique_id=210818482]
 script = ExtResource("1_5m7gv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2145412151]
-scale = Vector2(26, 28)
+modulate = Color(0.5294118, 1, 1, 1)
+scale = Vector2(20, 20)
 texture = SubResource("CanvasTexture_bbsgk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=333341736]
