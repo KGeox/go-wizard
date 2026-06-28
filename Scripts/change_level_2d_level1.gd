@@ -12,13 +12,13 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is Player2d:
+	if body is Player2d1:
 		body.current_interactable_obj = self
 		print("you Entered")
 
 
 func _on_body_exited(body: Node2D) -> void:
-	if body is Player2d:
+	if body is Player2d1:
 		if body.current_interactable_obj == self:
 			body.current_interactable_obj =null
 			print("You went out")

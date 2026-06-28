@@ -98,6 +98,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_elged"]
 
 [node name="coin2d" type="Area2D" unique_id=1156866793]
+collision_layer = 4
 script = ExtResource("1_b3h27")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1786399685]

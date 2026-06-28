@@ -122,9 +122,17 @@ interact={
 
 [layer_names]
 
+2d_render/layer_1="player"
+2d_render/layer_2="enemy"
+2d_render/layer_3="items"
+2d_render/layer_4="environment"
+2d_physics/layer_1="player"
 3d_physics/layer_1="everything_else"
+2d_physics/layer_2="enemy"
 3d_physics/layer_2="ground"
+2d_physics/layer_3="items"
 3d_physics/layer_3="coin"
+2d_physics/layer_4="environment"
 3d_physics/layer_4="enemy"
 3d_physics/layer_5="fallzone"
 3d_physics/layer_6="player"
