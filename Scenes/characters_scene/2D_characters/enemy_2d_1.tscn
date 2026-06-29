@@ -18,3 +18,5 @@ light_mask = 2
 visibility_layer = 11
 scale = Vector2(17, 19)
 texture = SubResource("CanvasTexture_krcub")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1230246047]
