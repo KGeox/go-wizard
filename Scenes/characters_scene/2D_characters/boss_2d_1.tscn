@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://bdf3qyf705c4v"]
+
+[ext_resource type="Texture2D" uid="uid://c2w67dbob6jam" path="res://Scenes/items_scene/2d/Boss2d1.png" id="1_00n6q"]
+[ext_resource type="Script" uid="uid://dqc0p10p1qffd" path="res://Scripts/boss_2d_1.gd" id="1_wpala"]
+[ext_resource type="Texture2D" uid="uid://ynvkpdxtk3wq" path="res://Scenes/items_scene/2d/meteorite.png" id="2_hx0lw"]
+[ext_resource type="Script" uid="uid://m5uik53ke1yd" path="res://Scripts/meteorite_2d.gd" id="3_jebn2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx0lw"]
+atlas = ExtResource("1_00n6q")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jebn2"]
+atlas = ExtResource("1_00n6q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpala"]
+atlas = ExtResource("1_00n6q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a16t0"]
+atlas = ExtResource("1_00n6q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t3b7"]
+atlas = ExtResource("1_00n6q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj0fm"]
+atlas = ExtResource("1_00n6q")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qio0t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hx0lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jebn2")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpala")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a16t0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t3b7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj0fm")
+}],
+"loop": true,
+"name": &"injured",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00n6q"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hx0lw"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jebn2"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wpala"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a16t0"]
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_jebn2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_wpala"]
+resource_name = "idle"
+length = 2.03
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 1.99),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.5707964, 3.1415927, 4.712389, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a16t0"]
+_data = {
+&"RESET": SubResource("Animation_jebn2"),
+&"idle": SubResource("Animation_wpala")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jebn2"]
+size = Vector2(107.125, 20)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wpala"]
+
+[node name="Boss_2D1" type="CharacterBody2D" unique_id=1228878618]
+script = ExtResource("1_wpala")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=642945752]
+sprite_frames = SubResource("SpriteFrames_qio0t")
+animation = &"attack"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1784765902]
+shape = SubResource("RectangleShape2D_00n6q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=359909481]
+
+[node name="Node" type="Node2D" parent="." unique_id=1710783697]
+position = Vector2(0, -42)
+
+[node name="Meteorite3" type="Sprite2D" parent="Node" unique_id=356395702]
+position = Vector2(1, -17)
+texture = ExtResource("2_hx0lw")
+script = ExtResource("3_jebn2")
+
+[node name="RigidBody2D" type="Area2D" parent="Node/Meteorite3" unique_id=1693905230]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Meteorite3/RigidBody2D" unique_id=1783822142]
+shape = SubResource("CircleShape2D_hx0lw")
+
+[node name="Meteorite2" type="Sprite2D" parent="Node" unique_id=2086862056]
+position = Vector2(22, 1)
+texture = ExtResource("2_hx0lw")
+script = ExtResource("3_jebn2")
+
+[node name="RigidBody2D" type="Area2D" parent="Node/Meteorite2" unique_id=720745654]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Meteorite2/RigidBody2D" unique_id=2095697045]
+shape = SubResource("CircleShape2D_jebn2")
+
+[node name="Meteorite" type="Sprite2D" parent="Node" unique_id=304708120]
+position = Vector2(-19, 1)
+texture = ExtResource("2_hx0lw")
+script = ExtResource("3_jebn2")
+
+[node name="RigidBody2D" type="Area2D" parent="Node/Meteorite" unique_id=1214998062]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Meteorite/RigidBody2D" unique_id=269188561]
+shape = SubResource("CircleShape2D_wpala")
+
+[node name="Meteorite4" type="Sprite2D" parent="Node" unique_id=962129954]
+position = Vector2(0, 16)
+texture = ExtResource("2_hx0lw")
+script = ExtResource("3_jebn2")
+
+[node name="RigidBody2D" type="Area2D" parent="Node/Meteorite4" unique_id=752289884]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Meteorite4/RigidBody2D" unique_id=272476428]
+shape = SubResource("CircleShape2D_a16t0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=406087242]
+libraries/ = SubResource("AnimationLibrary_a16t0")
+autoplay = &"idle"
+
+[node name="Detection area" type="Area2D" parent="." unique_id=346352479]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection area" unique_id=1286661273]
+position = Vector2(-70, 6)
+shape = SubResource("RectangleShape2D_jebn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Detection area/CollisionShape2D" unique_id=1821951050]
+modulate = Color(1, 0.11764706, 0.15294118, 0.49411765)
+position = Vector2(0.4999962, 0)
+scale = Vector2(106.99999, 18)
+texture = SubResource("CanvasTexture_wpala")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Detection area" unique_id=1578130032]
+position = Vector2(71, 6)
+shape = SubResource("RectangleShape2D_jebn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Detection area/CollisionShape2D2" unique_id=1737033820]
+modulate = Color(1, 0.11764706, 0.15294118, 0.49411765)
+position = Vector2(0.4999962, 0)
+scale = Vector2(106.99999, 18)
+texture = SubResource("CanvasTexture_wpala")
