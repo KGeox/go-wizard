@@ -1,6 +1,7 @@
-extends RigidBody2D
+extends StaticBody2D
 
-
+@export var pos := Vector2()
+@onready var anim_player: AnimationPlayer = $AnimationPlayer2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,10 +14,11 @@ func _process(delta: float) -> void:
 
 
 func _on_detection_body_entered(body: Node2D) -> void:
-	if body == Player2d1:
+	if body is Player2d1:
 		print("detected")
+		anim_player.play("move_bk")
+
 
 
 func _on_damage_body_entered(body: Node2D) -> void:
-	if body == Player2d1:
-		print("-1 life")
+	print("-1 life")
