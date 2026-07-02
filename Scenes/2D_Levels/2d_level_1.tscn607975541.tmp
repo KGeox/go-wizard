@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://8wnlgg7idk1g" path="res://Scripts/change_level_2d_level1.gd" id="6_fmqj2"]
 [ext_resource type="PackedScene" uid="uid://bnucjb16j8dv1" path="res://Scenes/characters_scene/2D_characters/enemy_2d_1.tscn" id="8_8amkq"]
 [ext_resource type="PackedScene" uid="uid://binnrioconhrt" path="res://Scenes/items_scene/2d/spikes_2d.tscn" id="9_q3ubc"]
+[ext_resource type="PackedScene" uid="uid://bdf3qyf705c4v" path="res://Scenes/characters_scene/2D_characters/boss_2d_1.tscn" id="11_r60xf"]
 [ext_resource type="PackedScene" uid="uid://datmufwpls3fj" path="res://Scenes/items_scene/2d/scie_2d.tscn" id="12_jy6ki"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t2ia8"]
@@ -5233,8 +5234,14 @@ speed = 50.0
 position = Vector2(958, -15)
 speed = 75.0
 
+[node name="Boss_2D1" parent="Enemies" unique_id=1228878618 instance=ExtResource("11_r60xf")]
+position = Vector2(1929, -39)
+
 [node name="enemy2D4" parent="Enemies" unique_id=917721900 instance=ExtResource("8_8amkq")]
 position = Vector2(897, -10)
+
+[node name="Boss_2D2" parent="Enemies" unique_id=842123807 instance=ExtResource("11_r60xf")]
+position = Vector2(1920, 312)
 
 [node name="Spikes" type="Node2D" parent="." unique_id=992390839]
 position = Vector2(211, -9)

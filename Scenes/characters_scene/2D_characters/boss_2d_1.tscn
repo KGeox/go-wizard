@@ -2,8 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c2w67dbob6jam" path="res://Scenes/items_scene/2d/Boss2d1.png" id="1_00n6q"]
 [ext_resource type="Script" uid="uid://dqc0p10p1qffd" path="res://Scripts/boss_2d_1.gd" id="1_wpala"]
-[ext_resource type="Texture2D" uid="uid://ynvkpdxtk3wq" path="res://Scenes/items_scene/2d/meteorite.png" id="2_hx0lw"]
-[ext_resource type="Script" uid="uid://m5uik53ke1yd" path="res://Scripts/meteorite_2d.gd" id="3_jebn2"]
+[ext_resource type="PackedScene" uid="uid://bxk6t0sbqga4s" path="res://Scenes/items_scene/2d/meteorite_3.tscn" id="3_jebn2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hx0lw"]
 atlas = ExtResource("1_00n6q")
@@ -68,18 +67,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00n6q"]
 size = Vector2(32, 32)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hx0lw"]
-radius = 5.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_jebn2"]
-radius = 5.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_wpala"]
-radius = 5.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_a16t0"]
-radius = 5.0
-
 [sub_resource type="Animation" id="Animation_jebn2"]
 length = 0.001
 tracks/0/type = "value"
@@ -139,45 +126,17 @@ shape = SubResource("RectangleShape2D_00n6q")
 [node name="Node" type="Node2D" parent="." unique_id=1710783697]
 position = Vector2(0, -42)
 
-[node name="Meteorite3" type="Sprite2D" parent="Node" unique_id=356395702]
+[node name="Meteorite3" parent="Node" unique_id=884930517 instance=ExtResource("3_jebn2")]
 position = Vector2(1, -17)
-texture = ExtResource("2_hx0lw")
-script = ExtResource("3_jebn2")
 
-[node name="RigidBody2D" type="Area2D" parent="Node/Meteorite3" unique_id=1693905230]
+[node name="Meteorite4" parent="Node" unique_id=1188789827 instance=ExtResource("3_jebn2")]
+position = Vector2(-22, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Meteorite3/RigidBody2D" unique_id=1783822142]
-shape = SubResource("CircleShape2D_hx0lw")
+[node name="Meteorite5" parent="Node" unique_id=1877402016 instance=ExtResource("3_jebn2")]
+position = Vector2(23, -1)
 
-[node name="Meteorite2" type="Sprite2D" parent="Node" unique_id=2086862056]
-position = Vector2(22, 1)
-texture = ExtResource("2_hx0lw")
-script = ExtResource("3_jebn2")
-
-[node name="RigidBody2D" type="Area2D" parent="Node/Meteorite2" unique_id=720745654]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Meteorite2/RigidBody2D" unique_id=2095697045]
-shape = SubResource("CircleShape2D_jebn2")
-
-[node name="Meteorite" type="Sprite2D" parent="Node" unique_id=304708120]
-position = Vector2(-19, 1)
-texture = ExtResource("2_hx0lw")
-script = ExtResource("3_jebn2")
-
-[node name="RigidBody2D" type="Area2D" parent="Node/Meteorite" unique_id=1214998062]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Meteorite/RigidBody2D" unique_id=269188561]
-shape = SubResource("CircleShape2D_wpala")
-
-[node name="Meteorite4" type="Sprite2D" parent="Node" unique_id=962129954]
-position = Vector2(0, 16)
-texture = ExtResource("2_hx0lw")
-script = ExtResource("3_jebn2")
-
-[node name="RigidBody2D" type="Area2D" parent="Node/Meteorite4" unique_id=752289884]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Meteorite4/RigidBody2D" unique_id=272476428]
-shape = SubResource("CircleShape2D_a16t0")
+[node name="Meteorite6" parent="Node" unique_id=1354772324 instance=ExtResource("3_jebn2")]
+position = Vector2(1, 15)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=406087242]
 libraries/ = SubResource("AnimationLibrary_a16t0")
@@ -205,3 +164,5 @@ modulate = Color(1, 0.11764706, 0.15294118, 0.49411765)
 position = Vector2(0.4999962, 0)
 scale = Vector2(106.99999, 18)
 texture = SubResource("CanvasTexture_wpala")
+
+[connection signal="body_entered" from="Detection area" to="." method="_on_detection_area_body_entered"]

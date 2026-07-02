@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bxk6t0sbqga4s"]
+
+[ext_resource type="Texture2D" uid="uid://ynvkpdxtk3wq" path="res://Scenes/items_scene/2d/meteorite.png" id="1_lcvfi"]
+[ext_resource type="Script" uid="uid://m5uik53ke1yd" path="res://Scripts/meteorite_2d.gd" id="2_0wlcc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hx0lw"]
+radius = 5.0
+
+[node name="Meteorite3" type="Sprite2D" unique_id=884930517]
+texture = ExtResource("1_lcvfi")
+script = ExtResource("2_0wlcc")
+
+[node name="RigidBody2D" type="Area2D" parent="." unique_id=1494355019]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1362409658]
+shape = SubResource("CircleShape2D_hx0lw")
+
+[connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]
