@@ -21,4 +21,5 @@ func _on_detection_body_entered(body: Node2D) -> void:
 
 
 func _on_damage_body_entered(body: Node2D) -> void:
-	print("-1 life")
+	Global.lifes -=1
+	print(Global.lifes)
