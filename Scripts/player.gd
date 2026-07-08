@@ -4,7 +4,7 @@ extends CharacterBody3D # saying what type of node it is controlling
 
 
 ## Determining how fast the player  moves
-@export var base_speed := 5.0
+@export var base_speed := 8.0
 const JUMP_VELOCITY = 9
 
 var current_interactable_obj :Node = null
@@ -17,7 +17,7 @@ var current_interactable_obj :Node = null
 var last_lean := 0.0
 
 ##Speed of running player
-var run_speed := 3.5  
+var run_speed := 4 
 
 ## default speed used to blend animations
 const BLEND_SPEED := 0.2
@@ -29,7 +29,9 @@ var state: BasePLayerState = PlayerStates.IDLE
 func _ready() -> void: # When the player first enters the game...
 	state.enter(self) #enter the current state
 	Global.load_game()
-
+	print(Global.coins)
+	print(Global.lifes)
+	
 ## Changes the current player state and runs the next state
 func change_state_to(next_state: BasePLayerState) -> void:
 	state.exit(self) #exit previous state

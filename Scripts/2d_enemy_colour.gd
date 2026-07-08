@@ -18,6 +18,6 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	Global.coins -= 1
-	print(Global.coins)
+	Global.lifes -= 1
+	print(Global.lifes)
 	

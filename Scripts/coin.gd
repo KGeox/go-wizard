@@ -13,4 +13,8 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node3D) -> void:
 	Global.coins += 1
 	Global.lifes += 1
+
+	Global.save_game()
+	print(Global.coins)
+	print(Global.lifes)
 	queue_free()

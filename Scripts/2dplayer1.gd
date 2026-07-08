@@ -6,6 +6,12 @@ const JUMP_VELOCITY = -350.0
 
 var current_interactable_obj :Node = null
 
+func _ready() -> void: # When the player first enters the game...
+	#state.enter(self) #enter the current state
+	Global.load_game()
+	print(Global.coins)
+	print(Global.lifes)
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
