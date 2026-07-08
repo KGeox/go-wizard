@@ -5166,6 +5166,8 @@ _data = {
 &"move_bk": SubResource("Animation_7emmt")
 }
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_r60xf"]
+
 [node name="2DLevel1" type="Node2D" unique_id=178806960]
 
 [node name="1CharacterBody2D" parent="." unique_id=210818482 instance=ExtResource("1_gdpfr")]
@@ -5183,6 +5185,7 @@ position = Vector2(-2, 22)
 shape = SubResource("WorldBoundaryShape2D_5fesm")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=183158512]
+modulate = Color(0.19607843, 0.19607843, 0.19607843, 1)
 z_index = -11
 position = Vector2(3540.0002, 59)
 scale = Vector2(7906, 148)
@@ -5291,6 +5294,12 @@ position = Vector2(3145, -90)
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="scie/scie2d4" unique_id=1408794861]
 libraries/ = SubResource("AnimationLibrary_lwk72")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=332848097]
+modulate = Color(0.039215688, 0.039215688, 0.039215688, 0.3372549)
+position = Vector2(2447.4998, 50.99996)
+scale = Vector2(6070.9995, 1108)
+texture = SubResource("CanvasTexture_r60xf")
 
 [connection signal="body_entered" from="Change_level" to="Change_level" method="_on_body_entered"]
 [connection signal="body_exited" from="Change_level" to="Change_level" method="_on_body_exited"]
