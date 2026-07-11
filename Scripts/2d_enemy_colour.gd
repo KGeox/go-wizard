@@ -18,6 +18,12 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	Global.lifes -= 1
-	print(Global.lifes)
+	if body is Player2d:
+		Global.lifes -= 1
+		print(Global.lifes)
 	
+
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	if body is Player2d:
+		queue_free()

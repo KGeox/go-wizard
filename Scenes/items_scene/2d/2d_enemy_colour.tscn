@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://ceykocv1lmbi5" path="res://Scripts/2d_enemy_colour.gd" id="1_6rwq0"]
 [ext_resource type="Texture2D" uid="uid://cj4n5ea0xeld3" path="res://brackeys_platformer_assets/sprites/slime_purple.png" id="1_lsqvl"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7shud"]
-radius = 8.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6rwq0"]
+radius = 6.0
+height = 14.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3jtxp"]
 atlas = ExtResource("1_lsqvl")
@@ -77,8 +78,11 @@ animations = [{
 "speed": 9.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6rwq0"]
-radius = 11.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7shud"]
+size = Vector2(18, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jtxp"]
+size = Vector2(12, 9)
 
 [node name="2d enemy colour" type="CharacterBody2D" unique_id=1768349856]
 collision_layer = 2
@@ -86,7 +90,7 @@ collision_mask = 11
 script = ExtResource("1_6rwq0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1476000865]
-shape = SubResource("CircleShape2D_7shud")
+shape = SubResource("CapsuleShape2D_6rwq0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=72877582]
 position = Vector2(0, -6)
@@ -99,6 +103,14 @@ frame_progress = 0.14500815
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=386494272]
-shape = SubResource("CircleShape2D_6rwq0")
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_7shud")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1479600614]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=511687449]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_3jtxp")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

@@ -2,15 +2,24 @@
 
 [ext_resource type="Script" uid="uid://dpnisnppw5qnc" path="res://Scripts/enemy_2d_1.gd" id="1_dih5w"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dih5w"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3dbv"]
+size = Vector2(12, 19)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_krcub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dih5w"]
+size = Vector2(17, 15.5625)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_s3dbv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2c0m"]
+size = Vector2(15, 4.5)
 
 [node name="enemy2D1" type="CharacterBody2D" unique_id=809194893]
 script = ExtResource("1_dih5w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=748302060]
-shape = SubResource("CircleShape2D_dih5w")
+shape = SubResource("RectangleShape2D_s3dbv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=87728352]
 modulate = Color(0.96862745, 0.44313726, 0.15686275, 1)
@@ -20,3 +29,22 @@ scale = Vector2(17, 19)
 texture = SubResource("CanvasTexture_krcub")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1230246047]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1056717593]
+position = Vector2(0, 1.78125)
+shape = SubResource("RectangleShape2D_dih5w")
+
+[node name="kill_enemy" type="Area2D" parent="." unique_id=261551697]
+
+[node name="Sprite2D" type="Sprite2D" parent="kill_enemy" unique_id=1123705449]
+modulate = Color(1, 0.023529412, 0.15686275, 1)
+position = Vector2(0, -8.15)
+scale = Vector2(15.000001, 3.9999998)
+texture = SubResource("CanvasTexture_s3dbv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill_enemy" unique_id=764666048]
+position = Vector2(0, -8.35)
+shape = SubResource("RectangleShape2D_m2c0m")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="kill_enemy" to="." method="_on_kill_enemy_body_entered"]

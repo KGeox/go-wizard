@@ -18,5 +18,11 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	Global.coins -= 1
-	print(Global.coins)
+	if body is Player2d1:
+		Global.lifes -= 1
+		print(Global.lifes)
+
+
+func _on_kill_enemy_body_entered(body: Node2D) -> void:
+	if body is Player2d1:
+		queue_free()

@@ -19,6 +19,10 @@ normal = Vector2(1, 0)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6vw6g"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r60xf"]
+normal = Vector2(-1, 0)
+distance = 32.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8amkq"]
 texture = ExtResource("2_k1y50")
 0:0/0 = 0
@@ -5191,6 +5195,10 @@ position = Vector2(3540.0002, 59)
 scale = Vector2(7906, 148)
 texture = SubResource("CanvasTexture_6vw6g")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=949420692]
+position = Vector2(3309, -24)
+shape = SubResource("WorldBoundaryShape2D_r60xf")
+
 [node name="TileMap" type="TileMap" parent="." unique_id=1449050138]
 tile_set = SubResource("TileSet_rfwkp")
 format = 2
@@ -5234,6 +5242,14 @@ speed = 50.0
 
 [node name="enemy2D3" parent="Enemies" unique_id=781823175 instance=ExtResource("8_8amkq")]
 position = Vector2(958, -15)
+speed = 75.0
+
+[node name="enemy2D5" parent="Enemies" unique_id=107801481 instance=ExtResource("8_8amkq")]
+position = Vector2(1904, 316)
+speed = 75.0
+
+[node name="enemy2D6" parent="Enemies" unique_id=297459983 instance=ExtResource("8_8amkq")]
+position = Vector2(1776, 321)
 speed = 75.0
 
 [node name="enemy2D4" parent="Enemies" unique_id=917721900 instance=ExtResource("8_8amkq")]
@@ -5296,7 +5312,7 @@ position = Vector2(3145, -90)
 libraries/ = SubResource("AnimationLibrary_lwk72")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=332848097]
-modulate = Color(0.039215688, 0.039215688, 0.039215688, 0.3372549)
+modulate = Color(0.11805989, 0.11805989, 0.11805989, 0.3372549)
 position = Vector2(2447.4998, 50.99996)
 scale = Vector2(6070.9995, 1108)
 texture = SubResource("CanvasTexture_r60xf")

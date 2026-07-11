@@ -13,6 +13,7 @@ offset_bottom = 648.0
 script = ExtResource("1_841fv")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=876004782]
+visible = false
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 643.0

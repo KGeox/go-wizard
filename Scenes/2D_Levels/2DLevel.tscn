@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cab5btdjef52e" path="res://Scenes/characters_scene/2D_characters/2character_body_2d.tscn" id="1_q5f4s"]
 [ext_resource type="Texture2D" uid="uid://b0mvyt14381by" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="2_d4flu"]
 [ext_resource type="Script" uid="uid://bjbltp0nqcb5t" path="res://Scripts/change_level_2D.gd" id="3_um3fg"]
+[ext_resource type="Texture2D" uid="uid://64elj25fhh6f" path="res://Scenes/items_scene/2d/Screenshot 2026-07-11 102809.png" id="4_clwry"]
 [ext_resource type="Texture2D" uid="uid://c6hqha44s0aqv" path="res://Scenes/other_assets/pngtree-funny-sun-png-image_13407676.png" id="4_fangl"]
 [ext_resource type="PackedScene" uid="uid://cmlu8a8qq40d4" path="res://Scenes/items_scene/2d/2_dmovingplatform_1.tscn" id="5_vum2w"]
 [ext_resource type="PackedScene" uid="uid://br8cpeo2124th" path="res://Scenes/items_scene/2d/coin_2d.tscn" id="6_vmhhd"]
@@ -351,6 +352,7 @@ z_index = -2
 position = Vector2(13, 0)
 tile_set = SubResource("TileSet_28yw3")
 format = 2
+layer_0/tile_data = PackedInt32Array(228, 196608, 1, 239, 196608, 1, 238, 196608, 1, -65290, 196608, 1, -130818, 196608, 1, -65282, 196608, 1, 258, 196608, 1, -130811, 196608, 1, -65275, 196608, 1, 266, 196608, 1, 267, 196608, 1, 269, 196608, 1, 272, 196608, 1, -65251, 196608, 1, -130783, 196608, 1, -130782, 196608, 1, -130781, 196608, 1, -130780, 196608, 1, -130779, 196608, 1, -130778, 196608, 1, 299, 196608, 1, 300, 196608, 1, 301, 196608, 1, 302, 196608, 1, 303, 196608, 1, -65230, 196608, 1, 313, 196608, 1, 314, 196608, 1, 315, 196608, 1, -65221, 196608, 1, -65220, 196608, 1, -65219, 196608, 1, -65218, 196608, 1, -65210, 196608, 1, 326, 196608, 1, 327, 196608, 1, 332, 196608, 1, -65199, 196608, 1, -130722, 196608, 1, -65185, 196608, 1, -261805, 196608, 1, -261806, 196608, 1, -327342, 196608, 1, -392879, 196608, 1, -523953, 196608, 1, -589489, 196608, 1, -589490, 196608, 1, -589491, 196608, 1, -589492, 196608, 1, -589493, 196608, 1, -523958, 196608, 1, -523959, 196608, 1, -392888, 196608, 1, -327353, 196608, 1, -261818, 196608, 1, -196283, 196608, 1, -130748, 196608, 1, -65213, 196608, 1, -130749, 196608, 1, -196285, 196608, 1, -261821, 196608, 1, -392893, 196608, 1, -458428, 196608, 1, -523963, 196608, 1, -458427, 196608, 1, -458426, 196608, 1, -392894, 196608, 1, -392895, 196608, 1, -392896, 196608, 1, -327361, 196608, 1, -327362, 196608, 1, -327364, 196608, 1, -327365, 196608, 1, -261830, 196608, 1, -261831, 196608, 1, -261832, 196608, 1, -261833, 196608, 1, -261835, 196608, 1, -261836, 196608, 1, -261837, 196608, 1, -261838, 196608, 1, -261839, 196608, 1, -261840, 196608, 1, -327371, 196608, 1, -327372, 196608, 1, -392909, 196608, 1, -392910, 196608, 1, -458447, 196608, 1, -458448, 196608, 1, -523985, 196608, 1, -523986, 196608, 1, -589523, 196608, 1, -655059, 196608, 1, -655060, 196608, 1, -655061, 196608, 1, -655062, 196608, 1, -589527, 196608, 1, -589528, 196608, 1, -523993, 196608, 1, -458457, 196608, 1, -458458, 196608, 1, -392922, 196608, 1, -392923, 196608, 1, -327389, 196608, 1, -261854, 196608, 1, -196319, 196608, 1, -196320, 196608, 1, -196321, 196608, 1, -261857, 196608, 1, -327393, 196608, 1, -327394, 196608, 1, -327395, 196608, 1, -392932, 196608, 1, -392933, 196608, 1, -392934, 196608, 1, -392935, 196608, 1, -327400, 196608, 1, -327401, 196608, 1, -327402, 196608, 1, -392938, 196608, 1, -458474, 196608, 1, -458475, 196608, 1, -524011, 196608, 1, -524012, 196608, 1, -524013, 196608, 1, -458478, 196608, 1, -458479, 196608, 1, -392943, 196608, 1, -327408, 196608, 1, -327409, 196608, 1, -458483, 196608, 1, -458484, 196608, 1, -458485, 196608, 1, -458486, 196608, 1, -458487, 196608, 1, -458488, 196608, 1, -458489, 196608, 1, -458490, 196608, 1, -458491, 196608, 1, -458492, 196608, 1, -458493, 196608, 1, -458494, 196608, 1, -458495, 196608, 1, -458496, 196608, 1, -458497, 196608, 1, -392961, 196608, 1, -327425, 196608, 1, -327426, 196608, 1, -327427, 196608, 1, -327428, 196608, 1, -261892, 196608, 1, -261893, 196608, 1, -261894, 196608, 1, -261895, 196608, 1, -261896, 196608, 1, -327432, 196608, 1, -392975, 196608, 1, -458511, 196608, 1, -458510, 196608, 1, -524046, 196608, 1, -524045, 196608, 1, -458513, 196608, 1, -458514, 196608, 1, -458515, 196608, 1, -458516, 196608, 1, -458517, 196608, 1, -458518, 196608, 1, -458519, 196608, 1, -392984, 196608, 1, -392985, 196608, 1, -392986, 196608, 1, -327451, 196608, 1, -524060, 196608, 1, -589596, 196608, 1, -524063, 196608, 1, -327458, 196608, 1, -589582, 196608, 1, -1179371, 196608, 1, -1244891, 196608, 1)
 
 [node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=2110539751]
 use_parent_material = true
@@ -365,8 +367,14 @@ script = ExtResource("3_um3fg")
 shape = SubResource("RectangleShape2D_um3fg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Change_level" unique_id=1844340852]
+visible = false
 scale = Vector2(167.9999, 188.00002)
 texture = SubResource("CanvasTexture_7dhqy")
+
+[node name="Screenshot20260711102809" type="Sprite2D" parent="Change_level" unique_id=335684459]
+position = Vector2(3, -5)
+scale = Vector2(0.55050516, 0.47362638)
+texture = ExtResource("4_clwry")
 
 [node name="PngtreeFunnySunPngImage13407676" type="Sprite2D" parent="." unique_id=736740506]
 z_index = -3
@@ -514,6 +522,66 @@ position = Vector2(925, -62)
 z_index = 1
 position = Vector2(742, -58)
 
+[node name="coin2d3" parent="coins" unique_id=1663495592 instance=ExtResource("6_vmhhd")]
+position = Vector2(4085, -624)
+
+[node name="coin2d33" parent="coins" unique_id=1407281065 instance=ExtResource("6_vmhhd")]
+position = Vector2(4307, -639)
+
+[node name="coin2d34" parent="coins" unique_id=945664859 instance=ExtResource("6_vmhhd")]
+position = Vector2(4593, -612)
+
+[node name="coin2d35" parent="coins" unique_id=1772353838 instance=ExtResource("6_vmhhd")]
+position = Vector2(4748, -745)
+
+[node name="coin2d36" parent="coins" unique_id=139858589 instance=ExtResource("6_vmhhd")]
+position = Vector2(4337, -915)
+
+[node name="coin2d37" parent="coins" unique_id=192966951 instance=ExtResource("6_vmhhd")]
+position = Vector2(4161, -754)
+
+[node name="coin2d38" parent="coins" unique_id=176597833 instance=ExtResource("6_vmhhd")]
+position = Vector2(4310, -751)
+
+[node name="coin2d39" parent="coins" unique_id=1763716477 instance=ExtResource("6_vmhhd")]
+position = Vector2(4465, -560)
+
+[node name="coin2d40" parent="coins" unique_id=672976610 instance=ExtResource("6_vmhhd")]
+position = Vector2(4435, -1055)
+
+[node name="coin2d41" parent="coins" unique_id=2001898051 instance=ExtResource("6_vmhhd")]
+position = Vector2(4198, -581)
+
+[node name="coin2d42" parent="coins" unique_id=603678075 instance=ExtResource("6_vmhhd")]
+position = Vector2(3979, -630)
+
+[node name="coin2d43" parent="coins" unique_id=108260582 instance=ExtResource("6_vmhhd")]
+position = Vector2(4772, -575)
+
+[node name="coin2d44" parent="coins" unique_id=575331550 instance=ExtResource("6_vmhhd")]
+position = Vector2(4638, -867)
+
+[node name="coin2d45" parent="coins" unique_id=1001489408 instance=ExtResource("6_vmhhd")]
+position = Vector2(4486, -852)
+
+[node name="coin2d46" parent="coins" unique_id=766333812 instance=ExtResource("6_vmhhd")]
+position = Vector2(3961, -338)
+
+[node name="coin2d47" parent="coins" unique_id=393981768 instance=ExtResource("6_vmhhd")]
+position = Vector2(3733, -350)
+
+[node name="coin2d48" parent="coins" unique_id=950576975 instance=ExtResource("6_vmhhd")]
+position = Vector2(4219, -283)
+
+[node name="coin2d49" parent="coins" unique_id=322866764 instance=ExtResource("6_vmhhd")]
+position = Vector2(4520, -387)
+
+[node name="coin2d50" parent="coins" unique_id=1722317928 instance=ExtResource("6_vmhhd")]
+position = Vector2(4988, -214)
+
+[node name="coin2d51" parent="coins" unique_id=1158718396 instance=ExtResource("6_vmhhd")]
+position = Vector2(4845, -365)
+
 [node name="Node2D" type="Node2D" parent="." unique_id=1387924994]
 
 [node name="2d enemy colour" parent="Node2D" unique_id=1768349856 instance=ExtResource("8_5fq3m")]
@@ -540,6 +608,21 @@ position = Vector2(3983, -538)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="pyramid_rand_move/2d movplat4" unique_id=86417945]
 libraries/ = SubResource("AnimationLibrary_7mpnp")
 autoplay = &"rand_move4"
+
+[node name="2d enemy colour" parent="." unique_id=1774673712 instance=ExtResource("8_5fq3m")]
+position = Vector2(4763, -198)
+
+[node name="2d enemy colour2" parent="." unique_id=100287058 instance=ExtResource("8_5fq3m")]
+position = Vector2(4793, -95)
+
+[node name="2d enemy colour3" parent="." unique_id=1006437178 instance=ExtResource("8_5fq3m")]
+position = Vector2(4966, -13)
+
+[node name="2d enemy colour4" parent="." unique_id=1308710393 instance=ExtResource("8_5fq3m")]
+position = Vector2(4441, -13)
+
+[node name="2d enemy colour5" parent="." unique_id=903050395 instance=ExtResource("8_5fq3m")]
+position = Vector2(5568, -16)
 
 [connection signal="body_entered" from="Change_level" to="Change_level" method="_on_body_entered"]
 [connection signal="body_exited" from="Change_level" to="Change_level" method="_on_body_exited"]
