@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b3ik2aalrpn2m"
+path="res://.godot/imported/road-corner.obj-ddd1e10b756d339fb6164291c157c392.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road-corner.obj-ddd1e10b756d339fb6164291c157c392.mesh"]
+
+source_file="res://Scenes/other_assets/OBJ format/road-corner.obj"
+dest_files=["res://.godot/imported/road-corner.obj-ddd1e10b756d339fb6164291c157c392.mesh", "res://.godot/imported/road-corner.obj-ddd1e10b756d339fb6164291c157c392.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
