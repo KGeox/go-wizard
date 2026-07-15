@@ -9,11 +9,16 @@ const JUMP_VELOCITY = 9
 
 var current_interactable_obj :Node = null
 
+var max_lifes := 10
+
 #at the start of the game import this nodes for me to control them
 @onready var camera: Node3D = $SpringArm3D/Camera3D
 @onready var anim_player: AnimationPlayer = $Mesh/AnimationPlayer
 @onready var anim_tree: AnimationTree = $AnimationTree
-
+@onready var att_animation: AnimationPlayer = $Sword
+@onready var cooldown := $AttackCooldown
+@onready var hpBar := $HUD/HPBar
+@onready var goldlabel := $HUD/gold_amount
 var last_lean := 0.0
 
 ##Speed of running player
@@ -22,15 +27,23 @@ var run_speed := 4
 ## default speed used to blend animations
 const BLEND_SPEED := 0.2
 
+var onCooldown := false
+
 
 ## The current(for now 1st) state that our player is in.
 var state: BasePLayerState = PlayerStates.IDLE
 
 func _ready() -> void: # When the player first enters the game...
+	hpBar.max_value = max_lifes
 	state.enter(self) #enter the current state
 	Global.load_game()
 	print(Global.coins)
 	print(Global.lifes)
+	
+func update_HUD() ->void:
+	hpBar.value = Global.lifes
+	goldlabel.text = str(Global.coins) + "coins"
+	
 	
 ## Changes the current player state and runs the next state
 func change_state_to(next_state: BasePLayerState) -> void:
@@ -45,6 +58,8 @@ func change_state_to(next_state: BasePLayerState) -> void:
 func _physics_process(delta: float) -> void: # run all instructions in here 60 times per second
 	state.pre_update(self) # in the state where you are do you do you have to change?
 	state.update(self, delta) # do what your state tells you to do
+	attack()
+	update_HUD()
 
 
 #Body moves with camera
@@ -54,6 +69,14 @@ func turn_to(direction: Vector3) ->void:
 		yaw = lerp_angle(rotation.y, yaw, .25) #make rotation smooth
 		rotation.y = yaw # rotate in ref to y(up unchanged)
 		
+
+func attack() -> void:
+	if Input.is_action_just_pressed("attack") and onCooldown == false:
+		att_animation.play("attack")
+		onCooldown = true
+		cooldown.start()
+		
+	
 
 #Get the input to move
 func get_move_input() -> Vector3:
@@ -75,3 +98,10 @@ func update_velocity_using_direction(direction: Vector3,speed: float = base_spee
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
 		
+
+
+func _on_attack_cooldown_timeout() -> void:
+	#att_animation.play("RESET")
+	onCooldown = false
+
+	att_animation.play("idle")

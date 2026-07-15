@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b855vu80vxp4u" path="res://Scripts/2dplayer.gd" id="1_ffda2"]
 [ext_resource type="Texture2D" uid="uid://dmapdam7euiv6" path="res://brackeys_platformer_assets/sprites/knight.png" id="1_gflt5"]
+[ext_resource type="Texture2D" uid="uid://cq057f1xix7g5" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarbacunder.png" id="3_ltdy0"]
+[ext_resource type="Texture2D" uid="uid://bjpbebgluqqcr" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarover.png" id="4_yu7gh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ffda2"]
 atlas = ExtResource("1_gflt5")
@@ -62,3 +64,22 @@ shape = SubResource("CircleShape2D_qbwpd")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=826042249]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=143315725]
+
+[node name="HPBar" type="TextureProgressBar" parent="HUD" unique_id=796167466]
+offset_left = 24.0
+offset_top = 41.0
+offset_right = 263.0
+offset_bottom = 81.0
+max_value = 20.0
+texture_under = ExtResource("3_ltdy0")
+texture_progress = ExtResource("4_yu7gh")
+
+[node name="gold_amount" type="Label" parent="HUD" unique_id=211134830]
+offset_left = 23.0
+offset_top = 7.0
+offset_right = 147.0
+offset_bottom = 46.0
+theme_type_variation = &"HeaderLarge"
+text = "0"

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://0bxjsxq4yd42"]
 
 [ext_resource type="Script" uid="uid://bqe5ufbbgcskg" path="res://Scripts/2dplayer1.gd" id="1_5m7gv"]
+[ext_resource type="Texture2D" uid="uid://cq057f1xix7g5" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarbacunder.png" id="2_a7x61"]
+[ext_resource type="Texture2D" uid="uid://bjpbebgluqqcr" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarover.png" id="3_bsn6w"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_bbsgk"]
 
@@ -20,3 +22,22 @@ shape = SubResource("CircleShape2D_bbsgk")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1760062960]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=264674919]
+
+[node name="HPBar" type="TextureProgressBar" parent="HUD" unique_id=411215180]
+offset_left = 24.0
+offset_top = 41.0
+offset_right = 263.0
+offset_bottom = 81.0
+max_value = 20.0
+texture_under = ExtResource("2_a7x61")
+texture_progress = ExtResource("3_bsn6w")
+
+[node name="gold_amount" type="Label" parent="HUD" unique_id=629175251]
+offset_left = 23.0
+offset_top = 7.0
+offset_right = 147.0
+offset_bottom = 46.0
+theme_type_variation = &"HeaderLarge"
+text = "0"

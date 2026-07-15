@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dwn5ys8m8sdjb" path="res://Meshes/hero_male.glb" id="2_cvnsp"]
 [ext_resource type="Script" uid="uid://bkxuivrwsw5ih" path="res://Scripts/footstepper.gd" id="4_vgqql"]
 [ext_resource type="PackedScene" uid="uid://clanes532phl7" path="res://Scenes/other_assets/Assets Pack/Sword.glb" id="5_mtap0"]
+[ext_resource type="Texture2D" uid="uid://cq057f1xix7g5" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarbacunder.png" id="6_e5q16"]
+[ext_resource type="Texture2D" uid="uid://bjpbebgluqqcr" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarover.png" id="7_am42d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bk35t"]
 
@@ -86,9 +88,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0.65634155, 1.4729004, -0.89538574)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("swordPoint/Sword:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.8492287, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_e5q16"]
 resource_name = "attack"
+length = 0.72
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -96,14 +111,27 @@ tracks/0/path = NodePath("swordPoint/Sword:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0.65634155, 1.4729004, -0.89538574)]
+"values": [Vector3(0.65634155, 1.4729004, -0.89538574), Vector3(0.3605652, 1.4729004, -1.338501)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("swordPoint/Sword:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.8492287, 0, 0), Vector3(1.0370095, -0.27958205, -0.7613878)]
 }
 
 [sub_resource type="Animation" id="Animation_askx2"]
 resource_name = "idle"
+length = 0.99
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -116,6 +144,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0.65634155, 1.4729004, -0.89538574), Vector3(0.45362854, 1.4620361, -0.89538574), Vector3(0.45362854, 1.4620361, -0.7770996)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("swordPoint/Sword:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.86),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.8498046, 0, 0), Vector3(1.8498046, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e5q16"]
@@ -149,35 +189,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.8273752)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Mesh/HeroRig_export" parent_id_path=PackedInt32Array(792156544, 1598506268) index="0" unique_id=1406543170]
-bones/0/position = Vector3(0.018192826, 1.0414782, 0.08801589)
+bones/0/position = Vector3(-0.00082839234, 1.1090142, 0.10921822)
 bones/0/rotation = Quaternion(1, 5.056924e-15, 1.0658141e-14, 6.16095e-08)
-bones/1/rotation = Quaternion(0.7648055, 0.0017551285, -0.0001049325, 0.64425886)
-bones/2/rotation = Quaternion(-0.8715022, -0.04776573, 0.023288526, 0.48750395)
-bones/3/rotation = Quaternion(0.48519439, -0.0036667953, 0.040638328, 0.87345386)
-bones/4/rotation = Quaternion(-0.3072428, 0.039466836, -0.04373769, 0.949806)
-bones/5/rotation = Quaternion(-0.8866273, 0.054314706, 0.036063336, 0.45786607)
-bones/6/rotation = Quaternion(0.8666854, 0.002071898, -0.07259075, 0.49354103)
-bones/7/rotation = Quaternion(0.008604777, 0.0014500131, -0.024332346, 0.9996659)
-bones/8/rotation = Quaternion(0.9484765, -0.027698215, 0.14370787, -0.28102195)
+bones/1/rotation = Quaternion(0.7610823, 0.05348568, -0.044872273, 0.6448872)
+bones/2/rotation = Quaternion(-0.94373214, -0.12255825, 0.009942263, 0.30700222)
+bones/3/rotation = Quaternion(0.78212255, -0.0026013413, 0.065508105, 0.6196662)
+bones/4/rotation = Quaternion(-0.12727034, -0.01252581, 0.028670013, 0.9913745)
+bones/5/rotation = Quaternion(-0.699621, 0.03984058, -0.008671418, 0.7133499)
+bones/6/rotation = Quaternion(0.19855626, 0.0041138195, -0.016630437, 0.9799398)
+bones/7/rotation = Quaternion(-0.22877902, -0.08626884, 0.0039435, 0.96964025)
+bones/8/rotation = Quaternion(0.943237, -0.0093555795, 0.029166661, -0.33070484)
 bones/9/rotation = Quaternion(-0.06446286, 2.8245384e-07, -5.580818e-09, 0.9979201)
-bones/10/rotation = Quaternion(-0.8536943, -0.10063031, -0.09030358, 0.50291634)
-bones/11/rotation = Quaternion(0.9578263, 0.28644264, 0.018906778, -0.012729388)
-bones/12/rotation = Quaternion(-0.07075076, 0.0070906244, -0.0056632697, 0.99745274)
-bones/13/rotation = Quaternion(-0.21986468, -0.03120799, 0.18397911, 0.95751625)
+bones/10/rotation = Quaternion(-0.8771768, -0.015101828, -0.021370789, 0.47945398)
+bones/11/rotation = Quaternion(0.91923356, 0.35465032, -0.16380496, 0.048998397)
+bones/12/rotation = Quaternion(-0.46671188, 0.006281384, -0.037358362, 0.88359773)
+bones/13/rotation = Quaternion(-0.14720315, -0.22109415, 0.26494053, 0.9269602)
 bones/14/rotation = Quaternion(-0.43457532, 0.8950093, -0.07173613, 0.070403956)
 bones/15/rotation = Quaternion(-0.1721431, 0.7210735, 0.19182459, 0.64313537)
 bones/16/rotation = Quaternion(-0.2176696, -0.000106906286, 0.00037531022, 0.9760225)
 bones/17/rotation = Quaternion(-0.1807904, -1.1214855e-06, -2.8545332e-07, 0.98352164)
-bones/18/rotation = Quaternion(1.4665372e-07, 0.0822528, -2.1470994e-06, 0.99661154)
+bones/18/rotation = Quaternion(-2.4638686e-07, -0.09812002, -2.1137275e-06, 0.99517465)
 bones/19/rotation = Quaternion(0.7206885, -0.6926366, -0.013503368, -0.026083518)
-bones/20/rotation = Quaternion(0.92928654, -0.2894436, 0.04449092, -0.2250991)
-bones/21/rotation = Quaternion(-0.7555638, -0.0046376027, 0.06048031, 0.6522607)
-bones/22/rotation = Quaternion(-0.33676195, 0.21460328, 0.141714, 0.90578914)
+bones/20/rotation = Quaternion(0.9018714, -0.38935015, 0.13168606, -0.1330168)
+bones/21/rotation = Quaternion(-0.3840547, -0.006560815, 0.030741937, 0.9227752)
+bones/22/rotation = Quaternion(-0.25050732, 0.30336237, -0.049936924, 0.91799986)
 bones/24/rotation = Quaternion(0.43457517, 0.8950093, -0.07173597, -0.07040379)
 bones/25/rotation = Quaternion(-0.17214316, -0.7210734, -0.19182463, 0.6431355)
 bones/26/rotation = Quaternion(-0.21766958, 0.00010679859, -0.00037532687, 0.9760224)
 bones/27/rotation = Quaternion(-0.18079041, 1.189675e-06, 3.975631e-07, 0.98352164)
-bones/28/rotation = Quaternion(-4.7875363e-07, 0.1880893, 2.15469e-06, 0.982152)
+bones/28/rotation = Quaternion(-5.056556e-07, 0.20730487, 2.1346418e-06, 0.97827643)
 bones/29/rotation = Quaternion(0.99971575, 5.6571863e-09, -6.39324e-08, 0.023842182)
 bones/29/scale = Vector3(1.0000002, 0.9999999, 1.0000014)
 
@@ -202,10 +242,34 @@ script = ExtResource("4_vgqql")
 [node name="swordPoint" type="Node3D" parent="." unique_id=844509096]
 
 [node name="Sword" parent="swordPoint" unique_id=1697355972 instance=ExtResource("5_mtap0")]
-transform = Transform3D(1, 0, 0, 0, -0.27484876, -0.9614875, 0, 0.9614875, -0.27484876, 0.65634155, 1.4729004, -0.89538574)
+transform = Transform3D(1, 0, 0, 0, -0.27484873, -0.9614874, 0, 0.9614874, -0.27484873, 0.65634155, 1.4729004, -0.89538574)
 
 [node name="Sword" type="AnimationPlayer" parent="." unique_id=1973402165]
 libraries/ = SubResource("AnimationLibrary_e5q16")
 autoplay = &"idle"
+
+[node name="AttackCooldown" type="Timer" parent="." unique_id=1542633008]
+wait_time = 1.001
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1079086516]
+
+[node name="HPBar" type="TextureProgressBar" parent="HUD" unique_id=1485692350]
+offset_left = 24.0
+offset_top = 41.0
+offset_right = 263.0
+offset_bottom = 81.0
+max_value = 20.0
+texture_under = ExtResource("6_e5q16")
+texture_progress = ExtResource("7_am42d")
+
+[node name="gold_amount" type="Label" parent="HUD" unique_id=194687246]
+offset_left = 23.0
+offset_top = 7.0
+offset_right = 147.0
+offset_bottom = 46.0
+theme_type_variation = &"HeaderLarge"
+text = "0"
+
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
 
 [editable path="Mesh"]
