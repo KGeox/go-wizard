@@ -1374,5 +1374,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.37301, 1, -74.6039)
 [node name="Enemy6" parent="." unique_id=1137413602 instance=ExtResource("10_htde6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.02152, 1, 71.498825)
 
+[node name="Enemy7" parent="." unique_id=758450769 instance=ExtResource("10_htde6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3245163, 1, -62.839138)
+
+[node name="Enemy8" parent="." unique_id=384119635 instance=ExtResource("10_htde6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.61216, 1, -79.78294)
+
 [connection signal="body_entered" from="StaticBody3D2" to="StaticBody3D2" method="_on_body_entered"]
 [connection signal="body_exited" from="StaticBody3D2" to="StaticBody3D2" method="_on_body_exited"]

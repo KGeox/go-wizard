@@ -30,7 +30,7 @@ material = SubResource("StandardMaterial3D_hghv2")
 radius = 32.885254
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_cgkq2"]
-radius = 2.0
+radius = 5.35791
 
 [sub_resource type="Animation" id="Animation_uptt0"]
 length = 0.001
@@ -181,3 +181,4 @@ mesh = SubResource("BoxMesh_odftv")
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
 [connection signal="body_entered" from="Attack_area" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="Attack_area" to="." method="_on_attack_area_body_exited"]

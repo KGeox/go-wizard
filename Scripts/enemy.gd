@@ -5,7 +5,7 @@ enum States {attack, idle, chase, die}
 var state := States.idle
 
 var enemy_life := 2
-var speed := 2.0
+var speed := 1.0
 var accel := 10
 var gravity := 10
 var target : Node3D = null
@@ -23,17 +23,18 @@ func _physics_process(delta: float) -> void:
 	
 	if state == States.idle:
 		velocity= Vector3.ZERO
-	elif state == States.chase:
-		
+	elif state == States.chase: 
+		$AnimationPlayer.stop()
 		navagent.target_position = target.global_position
-		
+		  
 		var direction := navagent.get_next_path_position() - global_position
 		direction.normalized()
-		
+		 
 		velocity = velocity.lerp(direction * speed, accel * delta)
 		 
 	elif state == States.attack:
-		pass
+		$AnimationPlayer.play("en_attack")
+
 	elif state == States.die:
 		pass
 		
@@ -56,3 +57,7 @@ func _on_attack_area_body_entered(body: Node3D) -> void:
 func _on_detection_area_body_exited(body: Node3D) -> void:
 	if body is Player:
 		state = States.idle
+
+
+func _on_attack_area_body_exited(body: Node3D) -> void:
+	state = States.chase
