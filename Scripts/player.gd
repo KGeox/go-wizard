@@ -2,7 +2,6 @@ class_name Player # naming my script for others
 extends CharacterBody3D # saying what type of node it is controlling
 
 
-
 ## Determining how fast the player  moves
 @export var base_speed := 8.0
 const JUMP_VELOCITY = 9
