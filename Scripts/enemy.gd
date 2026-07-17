@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 		pass
 		
 	move_and_slide()
-
+ 
 func _on_detection_area_body_entered(body: Node3D) -> void:
 	print("working")
 	if body is Player:

@@ -74,6 +74,9 @@ nodes/run_lean/position = Vector2(-272, 800)
 "nodes/Animation 6/position" = Vector2(-544, 608)
 node_connections = [&"output", 0, &"movement", &"movement", 0, &"Animation", &"movement", 1, &"walk_speed", &"movement", 2, &"run_lean", &"movement", 3, &"Animation 6", &"walk_speed", 0, &"Animation 2", &"run_lean", 0, &"Animation 4", &"run_lean", 1, &"Animation 3", &"run_lean", 2, &"Animation 5"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_e5q16"]
+size = Vector3(1, 0.60498047, 1.524292)
+
 [sub_resource type="Animation" id="Animation_mtap0"]
 length = 0.001
 tracks/0/type = "value"
@@ -86,7 +89,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.65634155, 1.4729004, -0.89538574)]
+"values": [Vector3(0.65634155, 2.4980185, 0.009771347)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -98,12 +101,24 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(1.8492287, 0, 0)]
+"values": [Vector3(1.2747011, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("swordPoint/Sword:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_e5q16"]
 resource_name = "attack"
-length = 0.72
+length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -114,7 +129,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0.65634155, 1.4729004, -0.89538574), Vector3(0.3605652, 1.4729004, -1.338501)]
+"values": [Vector3(-0.008894801, 2.4980185, 0.009771347), Vector3(0, 1.484, -2.4)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -126,37 +141,25 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(1.8492287, 0, 0), Vector3(1.0370095, -0.27958205, -0.7613878)]
+"values": [Vector3(1.2747011, 0, 0), Vector3(1.2747011, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("swordPoint/Sword:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.01, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_askx2"]
 resource_name = "idle"
 length = 0.99
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("swordPoint/Sword:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0.65634155, 1.4729004, -0.89538574), Vector3(0.45362854, 1.4620361, -0.89538574), Vector3(0.45362854, 1.4620361, -0.7770996)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("swordPoint/Sword:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.86),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1.8498046, 0, 0), Vector3(1.8498046, 0, 0)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e5q16"]
 _data = {
@@ -189,35 +192,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.8273752)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Mesh/HeroRig_export" parent_id_path=PackedInt32Array(792156544, 1598506268) index="0" unique_id=1406543170]
-bones/0/position = Vector3(-0.016370712, 1.0130708, 0.08492685)
+bones/0/position = Vector3(0.015731338, 1.06702, 0.09198052)
 bones/0/rotation = Quaternion(1, 5.056924e-15, 1.0658141e-14, 6.16095e-08)
-bones/1/rotation = Quaternion(0.75745726, 0.059242923, -0.04964895, 0.6482931)
-bones/2/rotation = Quaternion(-0.78309655, -0.1279641, 0.0037355574, 0.60858124)
-bones/3/rotation = Quaternion(0.80866027, -0.00245316, 0.06773077, 0.58435863)
-bones/4/rotation = Quaternion(-0.11030291, -0.02963727, 0.027136806, 0.9930854)
-bones/5/rotation = Quaternion(-0.94043183, -0.021633726, -0.016333204, 0.33890012)
-bones/6/rotation = Quaternion(0.50179744, 0.003626896, -0.042028967, 0.863956)
-bones/7/rotation = Quaternion(-0.15962858, -0.05107217, 0.06269593, 0.9838596)
-bones/8/rotation = Quaternion(0.9225575, 0.027316932, -0.2185538, -0.31682155)
+bones/1/rotation = Quaternion(0.7636007, 0.00077193946, 0.0002604076, 0.64568835)
+bones/2/rotation = Quaternion(-0.8139256, -0.04514957, 0.023707168, 0.57872665)
+bones/3/rotation = Quaternion(0.39609817, -0.0038521122, 0.03317593, 0.9176006)
+bones/4/rotation = Quaternion(-0.3177691, 0.046172637, -0.033269282, 0.94645876)
+bones/5/rotation = Quaternion(-0.8987173, 0.0757306, 0.02722802, 0.43108106)
+bones/6/rotation = Quaternion(0.85536164, 0.002153788, -0.07164233, 0.513049)
+bones/7/rotation = Quaternion(-0.014185921, 0.003788316, -0.014601389, 0.9997856)
+bones/8/rotation = Quaternion(0.95922065, -0.015325776, 0.088828094, -0.26790014)
 bones/9/rotation = Quaternion(-0.06446286, 2.8245384e-07, -5.580818e-09, 0.9979201)
-bones/10/rotation = Quaternion(-0.8747575, 0.16442549, 0.124553025, 0.43846318)
-bones/11/rotation = Quaternion(0.89046323, 0.35445324, -0.22266354, 0.17849155)
-bones/12/rotation = Quaternion(-0.69049674, 0.005126471, -0.055271108, 0.72120255)
-bones/13/rotation = Quaternion(-0.16758354, -0.28142443, 0.26862425, 0.90584606)
+bones/10/rotation = Quaternion(-0.84290016, -0.06357431, -0.059270617, 0.5310036)
+bones/11/rotation = Quaternion(0.95528173, 0.28411242, 0.02537296, -0.07793086)
+bones/12/rotation = Quaternion(-0.21517362, 0.006941041, -0.017223746, 0.97639924)
+bones/13/rotation = Quaternion(-0.15074213, -0.09198423, 0.17854819, 0.96795475)
 bones/14/rotation = Quaternion(-0.43457532, 0.8950093, -0.07173613, 0.070403956)
 bones/15/rotation = Quaternion(-0.1721431, 0.7210735, 0.19182459, 0.64313537)
 bones/16/rotation = Quaternion(-0.2176696, -0.000106906286, 0.00037531022, 0.9760225)
 bones/17/rotation = Quaternion(-0.1807904, -1.1214855e-06, -2.8545332e-07, 0.98352164)
-bones/18/rotation = Quaternion(-3.319715e-07, -0.14588673, -2.0821728e-06, 0.9893014)
+bones/18/rotation = Quaternion(-6.992735e-09, 0.0096644545, -2.1263734e-06, 0.9999533)
 bones/19/rotation = Quaternion(0.7206885, -0.6926366, -0.013503368, -0.026083518)
-bones/20/rotation = Quaternion(0.88635725, -0.4262933, -0.08201039, -0.16099465)
-bones/21/rotation = Quaternion(-0.00274136, -0.0071086707, 0.00021946806, 0.999971)
-bones/22/rotation = Quaternion(-0.2987798, 0.17517921, 0.008126573, 0.9380709)
+bones/20/rotation = Quaternion(0.91611093, -0.32668632, -0.038995434, -0.22912066)
+bones/21/rotation = Quaternion(-0.6443387, -0.005424835, 0.051577076, 0.76297975)
+bones/22/rotation = Quaternion(-0.3269655, 0.25234005, 0.11954874, 0.9028434)
 bones/24/rotation = Quaternion(0.43457517, 0.8950093, -0.07173597, -0.07040379)
 bones/25/rotation = Quaternion(-0.17214316, -0.7210734, -0.19182463, 0.6431355)
 bones/26/rotation = Quaternion(-0.21766958, 0.00010679859, -0.00037532687, 0.9760224)
 bones/27/rotation = Quaternion(-0.18079041, 1.189675e-06, 3.975631e-07, 0.98352164)
-bones/28/rotation = Quaternion(-2.8640085e-07, 0.10089092, 2.1623325e-06, 0.9948975)
+bones/28/rotation = Quaternion(-5.1315845e-07, 0.21435718, 2.1140772e-06, 0.97675544)
 bones/29/rotation = Quaternion(0.99971575, 5.6571863e-09, -6.39324e-08, 0.023842182)
 bones/29/scale = Vector3(1.0000002, 0.9999999, 1.0000014)
 
@@ -240,10 +243,16 @@ bus = &"Sound"
 script = ExtResource("4_vgqql")
 
 [node name="swordPoint" type="Node3D" parent="." unique_id=844509096]
-visible = false
 
 [node name="Sword" parent="swordPoint" unique_id=1697355972 instance=ExtResource("5_mtap0")]
-transform = Transform3D(1, 0, 0, 0, -0.27484873, -0.9614874, 0, 0.9614874, -0.27484873, 0.65634155, 1.4729004, -0.89538574)
+transform = Transform3D(1, 0, 0, 0, 0.2917875, -0.9564829, 0, 0.9564829, 0.2917875, 0.65634155, 2.4980185, 0.009771347)
+
+[node name="Area3D" type="Area3D" parent="swordPoint/Sword" unique_id=1803496189]
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="swordPoint/Sword/Area3D" unique_id=1518447401]
+transform = Transform3D(1, 0, 0, 0, 1.0000048, 3.2782555e-07, 0, -3.2782555e-07, 1.0000048, 0, -0.16314244, 0.1521244)
+shape = SubResource("BoxShape3D_e5q16")
 
 [node name="Sword" type="AnimationPlayer" parent="." unique_id=1973402165]
 libraries/ = SubResource("AnimationLibrary_e5q16")
