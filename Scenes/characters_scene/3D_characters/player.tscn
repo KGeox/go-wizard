@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dwn5ys8m8sdjb" path="res://Meshes/hero_male.glb" id="2_cvnsp"]
 [ext_resource type="Script" uid="uid://bkxuivrwsw5ih" path="res://Scripts/footstepper.gd" id="4_vgqql"]
 [ext_resource type="PackedScene" uid="uid://clanes532phl7" path="res://Scenes/other_assets/Assets Pack/Sword.glb" id="5_mtap0"]
+[ext_resource type="Script" uid="uid://0hbd0apptv58" path="res://Scripts/sword.gd" id="6_am42d"]
 [ext_resource type="Texture2D" uid="uid://cq057f1xix7g5" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarbacunder.png" id="6_e5q16"]
 [ext_resource type="Texture2D" uid="uid://bjpbebgluqqcr" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarover.png" id="7_am42d"]
 
@@ -74,8 +75,7 @@ nodes/run_lean/position = Vector2(-272, 800)
 "nodes/Animation 6/position" = Vector2(-544, 608)
 node_connections = [&"output", 0, &"movement", &"movement", 0, &"Animation", &"movement", 1, &"walk_speed", &"movement", 2, &"run_lean", &"movement", 3, &"Animation 6", &"walk_speed", 0, &"Animation 2", &"run_lean", 0, &"Animation 4", &"run_lean", 1, &"Animation 3", &"run_lean", 2, &"Animation 5"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_e5q16"]
-size = Vector3(1, 0.60498047, 1.524292)
+[sub_resource type="BoxShape3D" id="BoxShape3D_am42d"]
 
 [sub_resource type="Animation" id="Animation_mtap0"]
 length = 0.001
@@ -192,35 +192,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.8273752)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Mesh/HeroRig_export" parent_id_path=PackedInt32Array(792156544, 1598506268) index="0" unique_id=1406543170]
-bones/0/position = Vector3(0.015731338, 1.06702, 0.09198052)
+bones/0/position = Vector3(-0.016569829, 1.0213181, 0.08280138)
 bones/0/rotation = Quaternion(1, 5.056924e-15, 1.0658141e-14, 6.16095e-08)
-bones/1/rotation = Quaternion(0.7636007, 0.00077193946, 0.0002604076, 0.64568835)
-bones/2/rotation = Quaternion(-0.8139256, -0.04514957, 0.023707168, 0.57872665)
-bones/3/rotation = Quaternion(0.39609817, -0.0038521122, 0.03317593, 0.9176006)
-bones/4/rotation = Quaternion(-0.3177691, 0.046172637, -0.033269282, 0.94645876)
-bones/5/rotation = Quaternion(-0.8987173, 0.0757306, 0.02722802, 0.43108106)
-bones/6/rotation = Quaternion(0.85536164, 0.002153788, -0.07164233, 0.513049)
-bones/7/rotation = Quaternion(-0.014185921, 0.003788316, -0.014601389, 0.9997856)
-bones/8/rotation = Quaternion(0.95922065, -0.015325776, 0.088828094, -0.26790014)
+bones/1/rotation = Quaternion(0.75860274, 0.05567098, -0.04647209, 0.64750516)
+bones/2/rotation = Quaternion(-0.76559734, -0.123029105, 0.009560689, 0.631374)
+bones/3/rotation = Quaternion(0.7581873, -0.0027242375, 0.06350334, 0.6489314)
+bones/4/rotation = Quaternion(-0.06794283, -0.028577186, 0.02933732, 0.99684834)
+bones/5/rotation = Quaternion(-0.94928664, -0.036440667, -0.0071663717, 0.31221074)
+bones/6/rotation = Quaternion(0.46583277, 0.003711068, -0.03901667, 0.8840044)
+bones/7/rotation = Quaternion(-0.13936557, -0.044486582, 0.044796005, 0.98822653)
+bones/8/rotation = Quaternion(0.9183829, 0.030141264, -0.2398807, -0.3132439)
 bones/9/rotation = Quaternion(-0.06446286, 2.8245384e-07, -5.580818e-09, 0.9979201)
-bones/10/rotation = Quaternion(-0.84290016, -0.06357431, -0.059270617, 0.5310036)
-bones/11/rotation = Quaternion(0.95528173, 0.28411242, 0.02537296, -0.07793086)
-bones/12/rotation = Quaternion(-0.21517362, 0.006941041, -0.017223746, 0.97639924)
-bones/13/rotation = Quaternion(-0.15074213, -0.09198423, 0.17854819, 0.96795475)
+bones/10/rotation = Quaternion(-0.87018096, 0.17995532, 0.13731909, 0.4376581)
+bones/11/rotation = Quaternion(0.8907071, 0.3553554, -0.21895307, 0.1800643)
+bones/12/rotation = Quaternion(-0.70017785, 0.0050592753, -0.05604606, 0.71174735)
+bones/13/rotation = Quaternion(-0.17130367, -0.2823062, 0.240682, 0.912705)
 bones/14/rotation = Quaternion(-0.43457532, 0.8950093, -0.07173613, 0.070403956)
 bones/15/rotation = Quaternion(-0.1721431, 0.7210735, 0.19182459, 0.64313537)
 bones/16/rotation = Quaternion(-0.2176696, -0.000106906286, 0.00037531022, 0.9760225)
 bones/17/rotation = Quaternion(-0.1807904, -1.1214855e-06, -2.8545332e-07, 0.98352164)
-bones/18/rotation = Quaternion(-6.992735e-09, 0.0096644545, -2.1263734e-06, 0.9999533)
+bones/18/rotation = Quaternion(-3.431209e-07, -0.15229943, -2.078273e-06, 0.9883345)
 bones/19/rotation = Quaternion(0.7206885, -0.6926366, -0.013503368, -0.026083518)
-bones/20/rotation = Quaternion(0.91611093, -0.32668632, -0.038995434, -0.22912066)
-bones/21/rotation = Quaternion(-0.6443387, -0.005424835, 0.051577076, 0.76297975)
-bones/22/rotation = Quaternion(-0.3269655, 0.25234005, 0.11954874, 0.9028434)
+bones/20/rotation = Quaternion(0.8856814, -0.4223024, -0.10387316, -0.16260278)
+bones/21/rotation = Quaternion(-0.0027410511, -0.007108642, 0.00021945467, 0.99997103)
+bones/22/rotation = Quaternion(-0.31609017, 0.17445573, 0.006577256, 0.9325283)
 bones/24/rotation = Quaternion(0.43457517, 0.8950093, -0.07173597, -0.07040379)
 bones/25/rotation = Quaternion(-0.17214316, -0.7210734, -0.19182463, 0.6431355)
 bones/26/rotation = Quaternion(-0.21766958, 0.00010679859, -0.00037532687, 0.9760224)
 bones/27/rotation = Quaternion(-0.18079041, 1.189675e-06, 3.975631e-07, 0.98352164)
-bones/28/rotation = Quaternion(-5.1315845e-07, 0.21435718, 2.1140772e-06, 0.97675544)
+bones/28/rotation = Quaternion(-2.8662228e-07, 0.09854562, 2.153753e-06, 0.99513257)
 bones/29/rotation = Quaternion(0.99971575, 5.6571863e-09, -6.39324e-08, 0.023842182)
 bones/29/scale = Vector3(1.0000002, 0.9999999, 1.0000014)
 
@@ -245,14 +245,11 @@ script = ExtResource("4_vgqql")
 [node name="swordPoint" type="Node3D" parent="." unique_id=844509096]
 
 [node name="Sword" parent="swordPoint" unique_id=1697355972 instance=ExtResource("5_mtap0")]
-transform = Transform3D(1, 0, 0, 0, 0.2917875, -0.9564829, 0, 0.9564829, 0.2917875, 0.65634155, 2.4980185, 0.009771347)
+transform = Transform3D(1, 0, 0, 0, 0.29178748, -0.9564828, 0, 0.9564828, 0.29178748, 0.65634155, 2.4980185, 0.009771347)
+script = ExtResource("6_am42d")
 
-[node name="Area3D" type="Area3D" parent="swordPoint/Sword" unique_id=1803496189]
-collision_mask = 8
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="swordPoint/Sword/Area3D" unique_id=1518447401]
-transform = Transform3D(1, 0, 0, 0, 1.0000048, 3.2782555e-07, 0, -3.2782555e-07, 1.0000048, 0, -0.16314244, 0.1521244)
-shape = SubResource("BoxShape3D_e5q16")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="swordPoint/Sword" unique_id=254789655]
+shape = SubResource("BoxShape3D_am42d")
 
 [node name="Sword" type="AnimationPlayer" parent="." unique_id=1973402165]
 libraries/ = SubResource("AnimationLibrary_e5q16")

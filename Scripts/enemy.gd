@@ -18,8 +18,9 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		
 	
+	if enemy_life == 0:
+		queue_free()
 	
 	if state == States.idle:
 		$AnimationPlayer.play("idle")
@@ -63,3 +64,12 @@ func _on_detection_area_body_exited(body: Node3D) -> void:
 func _on_attack_area_body_exited(body: Node3D) -> void:
 	state = States.chase
 	$AnimationPlayer.stop()
+
+
+
+func _on_damageablebody_body_entered(body: Node3D) -> void:
+	print("hmm")
+	if body is Sword:
+		print("sword detected")
+		print(enemy_life)
+		enemy_life -=1

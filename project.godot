@@ -144,6 +144,7 @@ attack={
 3d_physics/layer_5="fallzone"
 3d_physics/layer_6="player"
 3d_physics/layer_7="item"
+3d_physics/layer_8="enemy_damageable_body"
 
 [physics]
 
