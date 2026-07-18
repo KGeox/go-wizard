@@ -66,10 +66,10 @@ func _on_attack_area_body_exited(body: Node3D) -> void:
 	$AnimationPlayer.stop()
 
 
-
-func _on_damageablebody_body_entered(body: Node3D) -> void:
+func _on_damageablebody_area_entered(area: Area3D) -> void:
 	print("hmm")
-	if body is Sword:
-		print("sword detected")
-		print(enemy_life)
-		enemy_life -=1
+	print("sword detected")
+	print(enemy_life)
+	enemy_life -=1
+	#if body is Sword:
+		
