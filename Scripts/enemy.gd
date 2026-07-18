@@ -71,5 +71,4 @@ func _on_damageablebody_area_entered(area: Area3D) -> void:
 	print("sword detected")
 	print(enemy_life)
 	enemy_life -=1
-	#if body is Sword:
 		

@@ -8,7 +8,7 @@ const JUMP_VELOCITY = 9
 
 var current_interactable_obj :Node = null
 
-var max_lifes := 10
+var max_lifes := 20
 
 #at the start of the game import this nodes for me to control them
 @onready var camera: Node3D = $SpringArm3D/Camera3D
@@ -59,6 +59,8 @@ func _physics_process(delta: float) -> void: # run all instructions in here 60 t
 	state.update(self, delta) # do what your state tells you to do
 	attack()
 	update_HUD()
+	if Global.lifes <= 0:
+		get_tree().reload_current_scene()
 
 
 #Body moves with camera
@@ -104,3 +106,9 @@ func _on_attack_cooldown_timeout() -> void:
 	onCooldown = false
 
 	att_animation.play("idle")
+
+
+func _on_damageable_area_entered(area: Area3D) -> void:
+	Global.lifes -= 1
+	print(Global.lifes)
+	

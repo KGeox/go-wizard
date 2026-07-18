@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://5rbo0uygkjuk" path="res://Scenes/items_scene/2d/killzone_2d.tscn" id="7_6bjy1"]
 [ext_resource type="PackedScene" uid="uid://bwsw12o3i6d3n" path="res://Scenes/items_scene/2d/2d_enemy_colour.tscn" id="8_5fq3m"]
 [ext_resource type="PackedScene" uid="uid://dv1sa5q71ww5a" path="res://Scenes/items_scene/2d/2d_movplat_2.tscn" id="9_7dhqy"]
+[ext_resource type="Texture2D" uid="uid://cb830mv50g3x6" path="res://Scenes/other_assets/fguyzjjnfdib1.jpg" id="11_pdbl0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d4flu"]
 distance = -527.0
@@ -623,6 +624,18 @@ position = Vector2(4441, -13)
 
 [node name="2d enemy colour5" parent="." unique_id=903050395 instance=ExtResource("8_5fq3m")]
 position = Vector2(5568, -16)
+
+[node name="2d enemy colour6" parent="." unique_id=352540918 instance=ExtResource("8_5fq3m")]
+position = Vector2(1667, -80)
+
+[node name="2d enemy colour7" parent="." unique_id=1307498600 instance=ExtResource("8_5fq3m")]
+position = Vector2(326, -51)
+
+[node name="Fguyzjjnfdib1" type="Sprite2D" parent="." unique_id=603564072]
+z_index = -20
+position = Vector2(2996.75, -617)
+scale = Vector2(5.520158, 1.2807018)
+texture = ExtResource("11_pdbl0")
 
 [connection signal="body_entered" from="Change_level" to="Change_level" method="_on_body_entered"]
 [connection signal="body_exited" from="Change_level" to="Change_level" method="_on_body_exited"]

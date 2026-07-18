@@ -13,6 +13,8 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6t5aa"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_am42d"]
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6t5aa"]
 animation = &"freehand_walk"
 
@@ -192,37 +194,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.8273752)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Mesh/HeroRig_export" parent_id_path=PackedInt32Array(792156544, 1598506268) index="0" unique_id=1406543170]
-bones/0/position = Vector3(0.01556818, 1.1185374, 0.1003558)
+bones/0/position = Vector3(0.019316958, 1.0153666, 0.08281927)
 bones/0/rotation = Quaternion(1, 5.056924e-15, 1.0658141e-14, 6.16095e-08)
-bones/1/rotation = Quaternion(0.7673724, 0.02970729, -0.024372123, 0.6400492)
-bones/2/rotation = Quaternion(-0.94909525, -0.06243068, 0.026249327, 0.30762267)
-bones/3/rotation = Quaternion(0.47179592, -0.0036976861, 0.039516117, 0.88081414)
-bones/4/rotation = Quaternion(-0.12092684, 0.011750502, 0.0457115, 0.99153876)
-bones/5/rotation = Quaternion(-0.71164775, 0.02162182, 0.041257806, 0.7009906)
-bones/6/rotation = Quaternion(0.55903816, 0.0034751901, -0.046823274, 0.8278116)
-bones/7/rotation = Quaternion(-0.098341644, -0.020639248, -0.050971854, 0.99363214)
-bones/8/rotation = Quaternion(0.9205386, -0.03787087, 0.21967414, -0.32080808)
+bones/1/rotation = Quaternion(0.7672509, 0.009491842, -0.006774215, 0.6412411)
+bones/2/rotation = Quaternion(-0.9462825, -0.04694788, 0.024601242, 0.31896707)
+bones/3/rotation = Quaternion(0.53008157, -0.0035547833, 0.044397943, 0.84677607)
+bones/4/rotation = Quaternion(-0.18551646, 0.027922709, -0.050860055, 0.9809268)
+bones/5/rotation = Quaternion(-0.8412257, 0.008866897, 0.04746756, 0.5385236)
+bones/6/rotation = Quaternion(0.85499454, 0.002156382, -0.0716116, 0.51366496)
+bones/7/rotation = Quaternion(0.014157323, 0.00080324046, -0.039038796, 0.99913716)
+bones/8/rotation = Quaternion(0.9186032, -0.038315244, 0.25093782, -0.30287024)
 bones/9/rotation = Quaternion(-0.06446286, 2.8245384e-07, -5.580818e-09, 0.9979201)
-bones/10/rotation = Quaternion(-0.86260444, -0.15685166, -0.1372192, 0.46095797)
-bones/11/rotation = Quaternion(0.935938, 0.34843877, -0.050849356, -0.004993385)
-bones/12/rotation = Quaternion(-0.21432026, 0.0069423006, -0.017155362, 0.97658813)
-bones/13/rotation = Quaternion(-0.16353466, -0.119959116, 0.22399162, 0.9532545)
+bones/10/rotation = Quaternion(-0.8633672, -0.17788266, -0.15469946, 0.44611993)
+bones/11/rotation = Quaternion(0.95031327, 0.3102598, -0.007141049, -0.024342021)
+bones/12/rotation = Quaternion(-0.16177754, 0.007014289, -0.012949519, 0.98671734)
+bones/13/rotation = Quaternion(-0.14263424, -0.009690562, 0.20115224, 0.9690714)
 bones/14/rotation = Quaternion(-0.43457532, 0.8950093, -0.07173613, 0.070403956)
 bones/15/rotation = Quaternion(-0.1721431, 0.7210735, 0.19182459, 0.64313537)
 bones/16/rotation = Quaternion(-0.2176696, -0.000106906286, 0.00037531022, 0.9760225)
 bones/17/rotation = Quaternion(-0.1807904, -1.1214855e-06, -2.8545332e-07, 0.98352164)
-bones/18/rotation = Quaternion(-5.0089465e-08, -0.0059474185, -2.10507e-06, 0.9999824)
+bones/18/rotation = Quaternion(1.6408646e-07, 0.091307685, -2.1223889e-06, 0.9958228)
 bones/19/rotation = Quaternion(0.7206885, -0.6926366, -0.013503368, -0.026083518)
-bones/20/rotation = Quaternion(0.91446126, -0.33180127, 0.2316492, 0.0027121168)
-bones/21/rotation = Quaternion(-0.6431516, -0.005431877, 0.051481478, 0.76398706)
-bones/22/rotation = Quaternion(-0.24532284, 0.29705447, 0.0022674373, 0.9228057)
+bones/20/rotation = Quaternion(0.93271446, -0.2427881, 0.24717592, -0.100009225)
+bones/21/rotation = Quaternion(-0.83711547, -0.0038596808, 0.06700717, 0.5428932)
+bones/22/rotation = Quaternion(-0.26093185, 0.22797565, 0.068430126, 0.9355528)
 bones/24/rotation = Quaternion(0.43457517, 0.8950093, -0.07173597, -0.07040379)
 bones/25/rotation = Quaternion(-0.17214316, -0.7210734, -0.19182463, 0.6431355)
 bones/26/rotation = Quaternion(-0.21766958, 0.00010679859, -0.00037532687, 0.9760224)
 bones/27/rotation = Quaternion(-0.18079041, 1.189675e-06, 3.975631e-07, 0.98352164)
-bones/28/rotation = Quaternion(-5.195805e-07, 0.21857251, 2.1249639e-06, 0.9758207)
+bones/28/rotation = Quaternion(-4.2925657e-07, 0.17265928, 2.1217152e-06, 0.98498166)
 bones/29/rotation = Quaternion(0.99971575, 5.6571863e-09, -6.39324e-08, 0.023842182)
 bones/29/scale = Vector3(1.0000002, 0.9999999, 1.0000014)
+
+[node name="damageable" type="Area3D" parent="Mesh/HeroRig_export" parent_id_path=PackedInt32Array(792156544, 1598506268) index="1" unique_id=576467400]
+collision_layer = 512
+collision_mask = 256
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mesh/HeroRig_export/damageable" unique_id=38177315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_am42d")
 
 [node name="AnimationPlayer" parent="Mesh" index="1" unique_id=942368168]
 active = false
@@ -281,6 +291,7 @@ offset_bottom = 46.0
 theme_type_variation = &"HeaderLarge"
 text = "0"
 
+[connection signal="area_entered" from="Mesh/HeroRig_export/damageable" to="." method="_on_damageable_area_entered"]
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
 
 [editable path="Mesh"]
