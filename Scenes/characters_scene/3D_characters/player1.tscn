@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://1031cw3wrruy"]
+
+[ext_resource type="Script" uid="uid://bpt5fr8d0oimn" path="res://Scripts/player.gd" id="1_gwoq2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hffm0"]
+size = Vector3(0.8, 1, 0.5)
+
+[sub_resource type="SphereMesh" id="SphereMesh_2ytgt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvke3"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1598906309]
+script = ExtResource("1_gwoq2")
+metadata/_custom_type_script = "uid://bpt5fr8d0oimn"
+
+[node name="Node3D" type="Node3D" parent="." unique_id=2002750119]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1671573850]
+mesh = SubResource("BoxMesh_hffm0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=421554552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("SphereMesh_2ytgt")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D" unique_id=1612653962]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=455094534]
+shape = SubResource("CapsuleShape3D_kvke3")

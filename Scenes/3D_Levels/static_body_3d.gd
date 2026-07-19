@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 
 func interact() ->void:
 	get_tree().change_scene_to_file("res://2D_Screens/END.tscn")
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	Global.save_game()
 
 

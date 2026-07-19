@@ -77,7 +77,6 @@ func attack() -> void:
 		onCooldown = true
 		cooldown.start()
 		
-	
 
 #Get the input to move
 func get_move_input() -> Vector3:

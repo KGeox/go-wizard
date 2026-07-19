@@ -3,10 +3,10 @@
 ---
 
 ## DEMO  [Dimension explorer](https://kgeox.itch.io/dimension-explorer)
-
+## video demo 
 ---
-
-## Summary
+https://youtu.be/yzgL1Fx3-JU
+## Description
 A 2 to 3D game where you start from a low design level to a high definition 3D world
 
 ![](/img1.png)
@@ -16,19 +16,19 @@ A 2 to 3D game where you start from a low design level to a high definition 3D w
 
 ## Commands
 #### 2D:
-> a / left_key = move left
-> d/ right_key = move right
-> space = jump
-> Tab = Interact with environment
+- a / left_key = move left
+- d/ right_key = move right
+- space = jump
+- Tab = Interact with environment
 
 #### 3D:
-> w = forward
-> a = left
-> s = backward
-> d = right
-> Tab = interact
-> i = attack
-> space = jump
+- w = forward
+- a = left
+- s = backward
+- d = right
+- Tab = interact
+- i = attack
+- space = jump
 
 ## Motivation
 
@@ -54,7 +54,8 @@ A 2 to 3D game where you start from a low design level to a high definition 3D w
 - gd-script
 - gd-shaders
 
+#### AI usage
+- For bug fixing 
 
 
 hope this readme helped
-
