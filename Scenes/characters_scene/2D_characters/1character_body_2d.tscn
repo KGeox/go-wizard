@@ -4,26 +4,279 @@
 [ext_resource type="Texture2D" uid="uid://cq057f1xix7g5" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarbacunder.png" id="2_a7x61"]
 [ext_resource type="Texture2D" uid="uid://bjpbebgluqqcr" path="res://Scenes/other_assets/Assets Pack/sprites/healthbarover.png" id="3_bsn6w"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_bbsgk"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_bbsgk"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ou7wk"]
+radius = 10.0
+height = 20.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bsn6w"]
+radius = 1.5
+height = 5.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_a7x61"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_bsn6w"]
+size = Vector2(3, 0.5)
+
+[sub_resource type="Animation" id="Animation_bnm5f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Design/R_eye/MeshInstance2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Design/L_eye/MeshInstance2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Design/R_eye:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Design/L_eye:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Design/closed2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Design/closed:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_rb4g5"]
+resource_name = "blink"
+length = 2.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Design/R_eye:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Design/L_eye:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Design/closed:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Design/closed2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_ou7wk"]
+resource_name = "idle"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Design/R_eye/MeshInstance2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, 0), Vector2(1, -1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Design/L_eye/MeshInstance2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, 0), Vector2(1, -1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Design/R_eye:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Design/L_eye:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Design/closed2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Design/closed:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsibm"]
+_data = {
+&"RESET": SubResource("Animation_bnm5f"),
+&"blink": SubResource("Animation_rb4g5"),
+&"idle": SubResource("Animation_ou7wk")
+}
 
 [node name="1CharacterBody2D" type="CharacterBody2D" unique_id=210818482]
 script = ExtResource("1_5m7gv")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2145412151]
-modulate = Color(0.5294118, 1, 1, 1)
-scale = Vector2(20, 20)
-texture = SubResource("CanvasTexture_bbsgk")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=333341736]
 shape = SubResource("CircleShape2D_bbsgk")
+
+[node name="Design" type="Node2D" parent="." unique_id=525628792]
+
+[node name="Body" type="MeshInstance2D" parent="Design" unique_id=546199191]
+modulate = Color(0.69803923, 0.33333334, 0.17254902, 1)
+mesh = SubResource("SphereMesh_ou7wk")
+
+[node name="R_eye" type="MeshInstance2D" parent="Design" unique_id=519260109]
+position = Vector2(-4, -3)
+mesh = SubResource("CapsuleMesh_bsn6w")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Design/R_eye" unique_id=1553327451]
+modulate = Color(0, 0, 0, 1)
+mesh = SubResource("SphereMesh_a7x61")
+
+[node name="L_eye" type="MeshInstance2D" parent="Design" unique_id=997245172]
+position = Vector2(4, -3)
+mesh = SubResource("CapsuleMesh_bsn6w")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Design/L_eye" unique_id=10280854]
+modulate = Color(0, 0, 0, 1)
+mesh = SubResource("SphereMesh_a7x61")
+
+[node name="closed" type="MeshInstance2D" parent="Design" unique_id=538391714]
+visible = false
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-4, -2)
+mesh = SubResource("QuadMesh_bsn6w")
+
+[node name="closed2" type="MeshInstance2D" parent="Design" unique_id=1588122077]
+visible = false
+modulate = Color(0, 0, 0, 1)
+position = Vector2(4, -2)
+mesh = SubResource("QuadMesh_bsn6w")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1760062960]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=264674919]
+visible = false
 
 [node name="HPBar" type="TextureProgressBar" parent="HUD" unique_id=411215180]
 offset_left = 24.0
@@ -41,3 +294,10 @@ offset_right = 147.0
 offset_bottom = 46.0
 theme_type_variation = &"HeaderLarge"
 text = "0"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=925740604]
+libraries/ = SubResource("AnimationLibrary_gsibm")
+autoplay = &"idle"
+
+[node name="Timer" type="Timer" parent="." unique_id=43674599]
+wait_time = 5.0
