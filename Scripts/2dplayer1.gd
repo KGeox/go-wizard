@@ -47,8 +47,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		#$Timer.start()
-		#$Timer.timeout
-		#$AnimationPlayer.play("idle")
+		$Timer.start()
+		$Timer.timeout
+		$AnimationPlayer.play("idle")
 
 	move_and_slide()
