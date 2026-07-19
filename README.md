@@ -3,11 +3,12 @@
 ---
 
 ## DEMO  [Dimension explorer](https://kgeox.itch.io/dimension-explorer)
-## video demo 
+## Video demo: https://youtu.be/yzgL1Fx3-JU
 ---
-https://youtu.be/yzgL1Fx3-JU
+
 ## Description
-A 2 to 3D game where you start from a low design level to a high definition 3D world
+In a world where there stole your dimensions go from 2d to 3d worlds to gain them back.
+A 2 to 3D game where you start from a low design 2D level to a high definition 3D world
 
 ![](/img1.png)
 ![](/img2.png)
